@@ -40,6 +40,7 @@ const ZH_CN = Object.freeze({
   Tasks: "任务", Boards: "看板", Habits: "习惯", "Daily questions": "每日自省",
   "Habit canvas": "习惯画布", "Today’s tasks": "今日任务",
   "Daily operating system": "每日运行系统", "Connected time horizons": "连接时间尺度",
+  "Connected horizons": "连接时间尺度", "Create note": "创建笔记",
   "Attention, not noise": "关注重点，过滤噪音", "Evidence over memory": "用记录代替印象",
   "Outcomes with context": "让结果带上上下文", "Relationships with memory": "有记忆的人际关系",
   "Ideas into finished work": "让想法变成作品", "Knowledge in context": "情境中的知识", "Managed intelligence": "可控的智能",
@@ -53,6 +54,13 @@ const ZH_CN = Object.freeze({
   "AI tools loaded": "AI 工具已加载", "AI unavailable": "AI 暂不可用", "Quick capture": "快速记录",
   Ideas: "想法", "Create notes": "创建笔记", "Not started": "尚未开始", Ready: "已就绪",
   "No data": "暂无数据", "No record": "未记录", "Not recorded": "未记录", Unchecked: "未完成",
+  "Not created": "未创建", Loaded: "已加载", Loading: "加载中",
+  "No scores yet": "尚无评分", "No score recorded": "未记录评分", "Daily effort scores": "每日努力度评分",
+  Done: "已完成", "No note": "无笔记", "All types": "全部类型", "All statuses": "全部状态",
+  "Status not set": "未设置状态", "Task index unavailable": "任务索引不可用", "Task index unavailable.": "任务索引不可用。",
+  "Loading open items": "正在加载未完成项…", "Open-item index unavailable": "未完成项索引不可用",
+  Configured: "已配置", Installed: "已安装", Unavailable: "不可用", Available: "可用",
+  "Manual prompts": "手动确认", "Auto-allow on": "已开启自动允许", Unknown: "未知",
   "Invalid value": "无效数值", Overdue: "已逾期", Upcoming: "即将到来", "Unscheduled / other": "未排期 / 其他",
   All: "全部", "All tasks": "全部任务", "Due today": "今日到期", "Scheduled today": "今日计划",
   High: "高优先级", "Needs attention": "需要关注", "Commitment feed": "承诺清单", "Where your attention goes": "注意力流向",
@@ -63,6 +71,13 @@ const ZH_CN = Object.freeze({
   "Open board": "打开看板", "Open note": "打开笔记", "Standard graph": "标准图谱", "Clear selection": "清除选择",
   "All regions": "全部区域", "Find a note…": "搜索笔记…", "Brain regions": "大脑分区", "Notes and connections": "笔记与连接",
   "Your connected brain": "你的关联大脑", "Restore view defaults": "恢复默认视图",
+  "Direction & projects": "方向与项目", "Journal & reflection": "日记与反思",
+  "Knowledge & ideas": "知识与想法", "Tasks & systems": "任务与系统",
+  "Labels: Auto": "标签：自动", "Labels: All": "标签：全部", "Labels: Hover only": "标签：仅悬停显示",
+  "No linked notes yet. Add a wikilink in this note to connect it.": "暂无链接笔记。在此笔记中添加双链即可建立连接。",
+  "No matching notes.": "没有匹配的笔记。", "This note is no longer available.": "该笔记已不存在。",
+  "Enable Obsidian's Graph view core plugin first.": "请先启用 Obsidian 的核心插件“关系图谱”。",
+  "3D brain graph. Drag to rotate, Shift-drag to pan, scroll to zoom. Arrow keys rotate. Browse notes in the adjacent list.": "3D 大脑图谱。拖动旋转，Shift 拖动平移，滚轮缩放，方向键旋转。可在旁边的列表中浏览笔记。",
   "Use comfortable spacing": "使用舒适间距", "Use compact spacing": "使用紧凑间距",
   "Hide optional visuals": "隐藏可选图表", "Show optional visuals": "显示可选图表",
   "Hide this module's visual": "隐藏本模块图表", "Show this module's visual": "显示本模块图表",
@@ -72,6 +87,7 @@ const ZH_CN = Object.freeze({
   "Open Life OS": "打开 Life OS", "Life OS Brain": "Life OS 大脑", "Continue setup": "继续设置",
   "Finish your Life OS setup": "完成 Life OS 设置", "Review the checklist.": "查看设置清单。",
   "Every control below opens a real note, dashboard, or capture workflow.": "下方每个操作都会打开真实的笔记、仪表盘或记录流程。",
+  "Each layer is ready when its canonical note exists.": "对应的标准笔记存在后，该时间层级即可使用。",
   "Choose what matters, capture what happens, and close the day honestly.": "选择真正重要的事，记录发生的一切，坦诚地结束今天。",
   "Keep today, this week, and this quarter connected to the same direction.": "让今天、本周和本季度指向同一个方向。",
   "See the commitments competing for attention and return to the work that matters.": "看清正在争夺注意力的承诺，回到真正重要的工作。",
@@ -82,6 +98,9 @@ const ZH_CN = Object.freeze({
   "Keep books, sources, reading, and ideas close to the work they inform.": "让书籍、资料、阅读和想法紧贴它们所支撑的工作。",
   "Ask, review, and draft with the vault as context while every change stays visible.": "以仓库为上下文进行询问、复盘和起草，并让每次修改都清晰可见。",
   "A private view of today’s properties. Journal text stays out of this screen.": "仅显示今日属性的私密视图，日记正文不会出现在此页。",
+  "Overdue, due today, scheduled today, or high priority. Open a task at its source.": "显示已逾期、今日到期、今日计划或高优先级任务。可在任务来源处打开。",
+  "Nothing urgent in the indexed tasks. Other open tasks remain available below.": "已索引任务中没有紧急事项，其他未完成任务仍可在下方查看。",
+  "Open tasks from the master inbox, projects, people, and writing notes.": "来自任务总收件箱、项目、联系人和写作笔记的未完成任务。",
   "Life OS will use your configured questions and habits.": "Life OS 将使用你配置的问题和习惯。",
   "Rate effort from 1 to 10.": "请按 1 至 10 分评估努力程度。", "A signal, never a judgment.": "这是信号，不是评判。",
   "See the complete context for today.": "查看今天的完整上下文。", "Run the guided evening check-in.": "开始晚间引导式复盘。",
@@ -144,6 +163,7 @@ const ZH_CN = Object.freeze({
   "Loading local tasks...": "正在加载本地任务…",
   "Local MCP bridge": "本地 MCP 桥接",
   "Move ideas and projects through the pipeline.": "让想法和项目沿工作流向前推进。",
+  "Every pipeline stays backed by its Markdown notes and Kanban board.": "每条创作流程都以 Markdown 笔记和看板为基础。",
   Newsletters: "通讯",
   "No active project notes yet.": "尚无进行中的项目笔记。",
   "No active projects yet.": "尚无进行中的项目。",
@@ -188,6 +208,16 @@ const ZH_CN = Object.freeze({
   "Review effort scores and trends.": "查看努力评分和趋势。",
   "Review streaks, gaps, and completion.": "检查连续记录、中断和完成情况。",
   "Sample board excluded from workflow counts.": "示例看板已从工作流统计中排除。",
+  "Sample notes included. These charts may contain demonstration data.": "已包含示例笔记，这些图表可能包含演示数据。",
+  "Samples on": "已包含示例", "Include samples": "包含示例",
+  "Recorded effort and habits. Blank days mean no data, not zero.": "已记录的努力度与习惯。空白日期表示无数据，不是零分。",
+  "Your next retreat will bring this view to life.": "下次静修复盘将启用此视图。",
+  "In-vault assistant interface": "仓库内助手界面", "Local server key present": "已设置本地服务器密钥",
+  "Local tool connection": "本地工具连接",
+  "Capability status is local. Installed does not mean authenticated or connected.": "功能状态仅反映本地环境。已安装不代表已验证或连接。",
+  "Client setting is off. This reports policy, not enforcement.": "客户端设置已关闭。此处仅报告策略，不代表强制执行。",
+  "Client may auto-approve requests. This reports policy, not enforcement.": "客户端可能自动批准请求。此处仅报告策略，不代表强制执行。",
+  "Permission setting was not observable. No enforcement claim.": "无法读取权限设置，不对强制执行状态作出声明。",
   "Search books, sources, and connected notes.": "搜索书籍、来源和关联笔记。",
   "Search people": "搜索联系人",
   "Search the vault for a person or meeting context.": "在仓库中搜索联系人或会议背景。",
@@ -219,6 +249,9 @@ const ZH_CN = Object.freeze({
   "Example Person - Alex Rivera": "示例联系人：Alex Rivera",
   "Example Newsletter - Effort not results": "示例通讯：关注努力，而非结果",
   "Example Study Note - In the Beginning": "示例学习笔记：起初",
+  "Open the Setup dashboard and work through it, then tick this off": "打开“设置”仪表盘，按步骤完成后勾选此任务",
+  Health: "健康", Relationships: "人际关系", Family: "家庭", Career: "事业",
+  Finances: "财务", Growth: "成长", Fun: "乐趣", Meaning: "意义",
 });
 
 function translateZhCn(value) {
@@ -228,12 +261,36 @@ function translateZhCn(value) {
   if (openModule) return `打开 Life OS：${translateZhCn(openModule[1])}`;
   const days = text.match(/^(\d+) days$/);
   if (days) return `${days[1]} 天`;
+  const notesCreated = text.match(/^(\d+) of (\d+) notes created$/);
+  if (notesCreated) return `已创建 ${notesCreated[1]} / ${notesCreated[2]} 篇笔记`;
+  const dailyNotes = text.match(/^(\d+) daily notes$/);
+  if (dailyNotes) return `${dailyNotes[1]} 篇每日笔记`;
+  const recordedItems = text.match(/^(\d+)\/(\d+) recorded$/);
+  if (recordedItems) return `已记录 ${recordedItems[1]}/${recordedItems[2]}`;
+  const scoreLabel = text.match(/^(\d{4}-\d{2}-\d{2}): (No score recorded|[\d.]+ out of 10)$/);
+  if (scoreLabel) return `${scoreLabel[1]}：${scoreLabel[2] === "No score recorded" ? "未记录评分" : scoreLabel[2].replace(" out of 10", " / 10")}`;
   const checked = text.match(/^(\d+) of (\d+) checked in$/);
   if (checked) return `已记录 ${checked[1]} / ${checked[2]}`;
   const noteCount = text.match(/^(\d+) notes?$/);
   if (noteCount) return `${noteCount[1]} 篇笔记`;
+  const connectedNotes = text.match(/^Connected notes \((\d+)\)$/);
+  if (connectedNotes) return `关联笔记（${connectedNotes[1]}）`;
+  const browseNotes = text.match(/^Browse notes \((\d+)\)$/);
+  if (browseNotes) return `浏览笔记（${browseNotes[1]}）`;
   const matching = text.match(/^Showing (\d+) of (\d+) matching notes\.$/);
   if (matching) return `显示 ${matching[1]} / ${matching[2]} 篇匹配笔记。`;
+  const matchingTasks = text.match(/^Showing (\d+) of (\d+) matching tasks\.$/);
+  if (matchingTasks) return `显示 ${matchingTasks[1]} / ${matchingTasks[2]} 个匹配任务。`;
+  const viewIndexedTasks = text.match(/^View all (\d+) indexed open tasks\.$/);
+  if (viewIndexedTasks) return `查看全部 ${viewIndexedTasks[1]} 个已索引的未完成任务。`;
+  const taskCoverage = text.match(/^(\d+) open, (\d+) samples? excluded$/);
+  if (taskCoverage) return `${taskCoverage[1]} 个未完成，已排除 ${taskCoverage[2]} 个示例`;
+  const indexedItems = text.match(/^(\d+) of (\d+) indexed open items shown( · partial index)?$/);
+  if (indexedItems) return `显示 ${indexedItems[1]} / ${indexedItems[2]} 个已索引的未完成项${indexedItems[3] ? " · 部分索引" : ""}`;
+  const focusFilter = text.match(/^(All|Overdue|Today|Upcoming|Unscheduled \/ other) · (\d+|Loading)$/);
+  if (focusFilter) return `${translateZhCn(focusFilter[1])} · ${focusFilter[2] === "Loading" ? "加载中" : focusFilter[2]}`;
+  const weekNumber = text.match(/^Week (\d+)$/);
+  if (weekNumber) return `第 ${weekNumber[1]} 周`;
   const projectTasks = text.match(/^(\d+) tagged open · (\d+) overdue( · partial index)?$/);
   if (projectTasks) return `${projectTasks[1]} 个已标记未完成任务 · ${projectTasks[2]} 个已逾期${projectTasks[3] ? " · 部分索引" : ""}`;
   const scoredRange = text.match(/^(\d+) scored days in (\d+) days · (.+)\. Missing days are not zero\.( Samples included\.| Samples excluded\.)$/);
@@ -252,12 +309,20 @@ function translateZhCn(value) {
   }
   const mcpState = text.match(/^Optional local tools via MCP · (key present, connection not tested|not configured)$/);
   if (mcpState) return `可选的本地 MCP 工具 · ${mcpState[1].startsWith("key") ? "密钥已存在，连接未测试" : "未配置"}`;
+  const availableCount = text.match(/^(\d+) of (\d+) available$/);
+  if (availableCount) return `${availableCount[1]} / ${availableCount[2]} 项可用`;
+  const sessions = text.match(/^(\d+) local sessions?$/);
+  if (sessions) return `${sessions[1]} 个本地会话`;
+  const workflows = text.match(/^(\d+) governed workflows$/);
+  if (workflows) return `${workflows[1]} 个受控工作流`;
   const discussions = text.match(/^(\d+) indexed person-discussion links( · partial index)?\. Explicit person tags only\.$/);
   if (discussions) return `${discussions[1]} 个已索引的联系人沟通链接${discussions[2] ? " · 部分索引" : ""}。仅计入带明确联系人标签的任务。`;
   const workload = text.match(/^(.+): (\d+) of (\d+)$/);
   if (workload) return `${translateZhCn(workload[1])}：${workload[2]} / ${workload[3]}`;
   const latestRetreat = text.match(/^Latest scored retreat: (.+)$/);
-  if (latestRetreat) return `最近一次已评分静修复盘：${latestRetreat[1]}`;
+  if (latestRetreat) return `最近一次已评分静修复盘：${latestRetreat[1].replace(/ Personal Retreat$/, " 个人静修复盘")}`;
+  const brainSummary = text.match(/^(\d+) notes · (\d+) links · (\d+) sample notes(?: · showing (\d+) of (\d+))?$/);
+  if (brainSummary) return `${brainSummary[1]} 篇笔记 · ${brainSummary[2]} 个链接 · ${brainSummary[3]} 篇示例笔记${brainSummary[4] ? ` · 显示 ${brainSummary[4]} / ${brainSummary[5]}` : ""}`;
   const connections = text.match(/^(\d+) connections?( · Sample note)?$/);
   if (connections) return `${connections[1]} 个连接${connections[2] ? " · 示例笔记" : ""}`;
   const links = text.match(/^(\d+) links?( · Sample)?$/);
@@ -1570,14 +1635,14 @@ class LifeOSHomeView extends ItemView {
       {
         icon: "sun",
         label: "Today",
-        period: moment().format("D MMM"),
+        period: this.zhCn ? moment().format("M月D日") : moment().format("D MMM"),
         path: `${paths.daily}/${moment().format("YYYY-MM-DD")}.md`,
         command: "quickadd:choice:lifeos-daily",
       },
       {
         icon: "calendar-range",
         label: "This week",
-        period: moment().format("[Week] ww"),
+        period: this.zhCn ? moment().format("第 ww 周") : moment().format("[Week] ww"),
         path: `${paths.weekly}/${moment().format("gggg-[W]ww")}.md`,
         command: "quickadd:choice:lifeos-weekly",
       },
@@ -2611,6 +2676,7 @@ class LifeOSBrainRenderer extends Component {
           this.tooltip.createDiv({ text: hit.node.path });
           this.tooltip.createDiv({ text: `${this.regions.find((r) => r.id === hit.node.region).name} · ${hit.node.degree} connections${hit.node.sample ? " · Sample note" : ""}` });
           this.tooltip.createDiv({ text: "Click to explore linked notes" });
+          translateRoot(this.tooltip, isZhCn(this.app));
           this.tooltip.style.left = `${Math.max(8, Math.min(x + 16, rect.width - this.tooltip.offsetWidth - 8))}px`;
           this.tooltip.style.top = `${Math.max(8, Math.min(y + 16, rect.height - this.tooltip.offsetHeight - 8))}px`;
         }
@@ -2829,7 +2895,7 @@ class LifeOSBrainRenderer extends Component {
     const paths = new Set(visible.map((node) => node.path));
     const edgeCount = this.edges.filter(([a, b]) => paths.has(a) && paths.has(b)).length;
     this.summary.setText(`${visible.length} notes · ${edgeCount} links · ${visible.filter((node) => node.sample).length} sample notes${this.total > this.nodes.length ? ` · showing ${this.nodes.length} of ${this.total}` : ""}`);
-    if (this.compact) { this.draw(); return; }
+    if (this.compact) { translateRoot(this.contentEl, isZhCn(this.app)); this.draw(); return; }
     this.panel.empty();
     const selected = this.nodes.find((node) => node.path === this.selected);
     if (selected) {
@@ -2853,6 +2919,7 @@ class LifeOSBrainRenderer extends Component {
       const clear = this.panel.createEl("button", { text: "Clear selection" });
       clear.addEventListener("click", () => { this.selected = null; this.update(); });
     }
+    translateRoot(this.contentEl, isZhCn(this.app));
     this.draw();
   }
   project(point, width, height) {
