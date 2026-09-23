@@ -2,7 +2,7 @@
   "choices": [
     {
       "id": "lifeos-journal",
-      "name": "📝 Journal entry",
+      "name": "📝 记录日记",
       "type": "Capture",
       "command": true,
       "captureTo": "01 Journal/Daily/{{DATE:YYYY-MM-DD}}.md",
@@ -21,7 +21,7 @@
       "task": false,
       "insertAfter": {
         "enabled": true,
-        "after": "## Journal",
+        "after": "## 日记",
         "insertAtEnd": true,
         "considerSubsections": false,
         "createIfNotFound": true,
@@ -47,7 +47,7 @@
     },
     {
       "id": "lifeos-win",
-      "name": "🏆 Log a win",
+      "name": "🏆 记录成就",
       "type": "Capture",
       "command": true,
       "captureTo": "01 Journal/Daily/{{DATE:YYYY-MM-DD}}.md",
@@ -66,7 +66,7 @@
       "task": false,
       "insertAfter": {
         "enabled": true,
-        "after": "## Wins",
+        "after": "## 今日成就",
         "insertAtEnd": true,
         "considerSubsections": false,
         "createIfNotFound": true,
@@ -92,7 +92,7 @@
     },
     {
       "id": "lifeos-gratitude",
-      "name": "🙏 Gratitude",
+      "name": "🙏 记录感恩",
       "type": "Capture",
       "command": true,
       "captureTo": "01 Journal/Daily/{{DATE:YYYY-MM-DD}}.md",
@@ -111,7 +111,7 @@
       "task": false,
       "insertAfter": {
         "enabled": true,
-        "after": "## Gratitude",
+        "after": "## 感恩",
         "insertAtEnd": true,
         "considerSubsections": false,
         "createIfNotFound": true,
@@ -137,7 +137,7 @@
     },
     {
       "id": "lifeos-task",
-      "name": "✅ Add task (master list)",
+      "name": "✅ 添加任务（总清单）",
       "type": "Capture",
       "command": true,
       "captureTo": "08 Tasks/Tasks.md",
@@ -182,7 +182,7 @@
     },
     {
       "id": "lifeos-newsletter-idea",
-      "name": "✉️ Newsletter idea → backlog",
+      "name": "✉️ 通讯想法 → 待办",
       "type": "Capture",
       "command": true,
       "captureTo": "06 Writing/Newsletters/Newsletter Board.md",
@@ -227,7 +227,7 @@
     },
     {
       "id": "lifeos-video-idea",
-      "name": "🎬 Video idea → backlog",
+      "name": "🎬 视频想法 → 待办",
       "type": "Capture",
       "command": true,
       "captureTo": "06 Writing/YouTube Scripts/YouTube Board.md",
@@ -272,7 +272,7 @@
     },
     {
       "id": "lifeos-article-idea",
-      "name": "📰 Article idea → backlog",
+      "name": "📰 文章想法 → 待办",
       "type": "Capture",
       "command": true,
       "captureTo": "06 Writing/Articles/Article Board.md",
@@ -317,7 +317,7 @@
     },
     {
       "id": "lifeos-project-idea",
-      "name": "💡 Project idea → Projects Board",
+      "name": "💡 项目想法 → 项目看板",
       "type": "Capture",
       "command": true,
       "captureTo": "04 Projects/Projects Board.md",
@@ -362,7 +362,7 @@
     },
     {
       "id": "lifeos-daily",
-      "name": "📅 Open today's note",
+      "name": "📅 打开今日笔记",
       "type": "Template",
       "command": true,
       "templatePath": "Templates/Daily Note.md",
@@ -392,7 +392,7 @@
     },
     {
       "id": "lifeos-weekly",
-      "name": "🗓️ Open this week's note",
+      "name": "🗓️ 打开本周笔记",
       "type": "Template",
       "command": true,
       "templatePath": "Templates/Weekly Note.md",
@@ -422,7 +422,7 @@
     },
     {
       "id": "lifeos-quarterly",
-      "name": "🧭 Open this quarter's note",
+      "name": "🧭 打开本季度笔记",
       "type": "Template",
       "command": true,
       "templatePath": "Templates/Quarterly Note.md",
@@ -452,7 +452,7 @@
     },
     {
       "id": "lifeos-retreat",
-      "name": "🏕️ New personal retreat (this quarter)",
+      "name": "🏕️ 新建本季度个人静修复盘",
       "type": "Template",
       "command": true,
       "templatePath": "Templates/Personal Retreat.md",
@@ -482,7 +482,7 @@
     },
     {
       "id": "lifeos-new-project",
-      "name": "📁 New project",
+      "name": "📁 新建项目",
       "type": "Template",
       "command": true,
       "templatePath": "Templates/Project.md",
@@ -512,7 +512,7 @@
     },
     {
       "id": "lifeos-new-person",
-      "name": "👤 New person",
+      "name": "👤 新建联系人",
       "type": "Template",
       "command": true,
       "templatePath": "Templates/Person.md",
@@ -542,7 +542,7 @@
     },
     {
       "id": "lifeos-new-newsletter",
-      "name": "✉️ New newsletter",
+      "name": "✉️ 新建通讯",
       "type": "Template",
       "command": true,
       "templatePath": "Templates/Newsletter.md",
@@ -572,7 +572,7 @@
     },
     {
       "id": "lifeos-new-video",
-      "name": "🎬 New video script",
+      "name": "🎬 新建视频脚本",
       "type": "Template",
       "command": true,
       "templatePath": "Templates/YouTube Script.md",
@@ -602,7 +602,7 @@
     },
     {
       "id": "lifeos-new-article",
-      "name": "📰 New article",
+      "name": "📰 新建文章",
       "type": "Template",
       "command": true,
       "templatePath": "Templates/Article.md",
@@ -632,7 +632,7 @@
     },
     {
       "id": "lifeos-new-course-lesson",
-      "name": "🎓 New course lesson",
+      "name": "🎓 新建课程单元",
       "type": "Template",
       "command": true,
       "templatePath": "Templates/Course Lesson.md",
@@ -662,7 +662,7 @@
     },
     {
       "id": "lifeos-new-book",
-      "name": "📚 New book note",
+      "name": "📚 新建读书笔记",
       "type": "Template",
       "command": true,
       "templatePath": "Templates/Book Note.md",
@@ -692,7 +692,7 @@
     },
     {
       "id": "lifeos-new-study-note",
-      "name": "📖 New study note",
+      "name": "📖 新建学习笔记",
       "type": "Template",
       "command": true,
       "templatePath": "Templates/Study Note.md",

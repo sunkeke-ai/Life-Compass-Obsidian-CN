@@ -27,6 +27,119 @@ const TASK_STATUS_TYPES = Object.freeze({
   "-": "closed",
 });
 
+const ZH_CN = Object.freeze({
+  Home: "首页", Today: "今天", Plan: "规划", Focus: "专注", Review: "复盘",
+  Projects: "项目", People: "人际", Create: "创作", Library: "知识库", Brain: "大脑",
+  Search: "搜索", Configure: "设置", View: "视图", Capture: "记录", Journal: "日记",
+  "Log a win": "记录成就", Gratitude: "感恩", "Add a task": "添加任务",
+  "Project idea": "项目想法", "Newsletter idea": "通讯想法", "Video idea": "视频想法", "Article idea": "文章想法",
+  "New project": "新建项目", "New person": "新建联系人", "New newsletter": "新建通讯",
+  "New video script": "新建视频脚本", "New article": "新建文章", "New course lesson": "新建课程单元",
+  "New book note": "新建读书笔记", "New study note": "新建学习笔记",
+  "This week": "本周", "This quarter": "本季度", Retreat: "静修复盘", Compass: "人生罗盘",
+  Tasks: "任务", Boards: "看板", Habits: "习惯", "Daily questions": "每日自省",
+  "Habit canvas": "习惯画布", "Today’s tasks": "今日任务",
+  "Daily operating system": "每日运行系统", "Connected time horizons": "连接时间尺度",
+  "Attention, not noise": "关注重点，过滤噪音", "Evidence over memory": "用记录代替印象",
+  "Outcomes with context": "让结果带上上下文", "Relationships with memory": "有记忆的人际关系",
+  "Ideas into finished work": "让想法变成作品", "Knowledge in context": "情境中的知识", "Managed intelligence": "可控的智能",
+  "Open and act": "打开并行动", "Today at a glance": "今日一览", "Create today’s note": "创建今日笔记",
+  "Start today": "开始今天", "Open daily note": "打开每日笔记", "Open today": "打开今天", "Ask Life OS": "询问 Life OS",
+  Now: "当下", "Your connected notes": "你的关联笔记", "Explore Brain": "探索大脑",
+  "Recorded signals": "已记录信号", "Explore Review": "进入复盘", "Your life, in view": "你的人生全景",
+  "Daily effort": "每日努力度", "Read daily values": "查看每日数值", Date: "日期",
+  "Effort (1 to 10)": "努力程度（1 至 10）", "Life areas": "人生领域", "Open scored retreat": "打开已评分复盘",
+  "Habit rhythm": "习惯节律", "Local vault": "本地仓库", "Local-first": "本地优先",
+  "AI tools loaded": "AI 工具已加载", "AI unavailable": "AI 暂不可用", "Quick capture": "快速记录",
+  Ideas: "想法", "Create notes": "创建笔记", "Not started": "尚未开始", Ready: "已就绪",
+  "No data": "暂无数据", "No record": "未记录", "Not recorded": "未记录", Unchecked: "未完成",
+  "Invalid value": "无效数值", Overdue: "已逾期", Upcoming: "即将到来", "Unscheduled / other": "未排期 / 其他",
+  All: "全部", "All tasks": "全部任务", "Due today": "今日到期", "Scheduled today": "今日计划",
+  High: "高优先级", "Needs attention": "需要关注", "Commitment feed": "承诺清单", "Where your attention goes": "注意力流向",
+  "Active projects": "进行中项目", "Project pulse": "项目脉搏", "People directory": "联系人目录", "Discuss queue": "待沟通队列",
+  "Creative studio": "创作工作室", "Creative boards": "创作看板", "Library shelf": "知识书架", "Reading plan": "阅读计划",
+  "Search the library": "搜索知识库", "Writing pipelines": "写作流程", "Open assistant": "打开 AI 助手",
+  "What matters today": "今天最重要的事", "Task triage": "任务整理", "Setup and permissions": "设置与权限",
+  "Open board": "打开看板", "Open note": "打开笔记", "Standard graph": "标准图谱", "Clear selection": "清除选择",
+  "All regions": "全部区域", "Find a note…": "搜索笔记…", "Brain regions": "大脑分区", "Notes and connections": "笔记与连接",
+  "Your connected brain": "你的关联大脑", "Restore view defaults": "恢复默认视图",
+  "Use comfortable spacing": "使用舒适间距", "Use compact spacing": "使用紧凑间距",
+  "Hide optional visuals": "隐藏可选图表", "Show optional visuals": "显示可选图表",
+  "Hide this module's visual": "隐藏本模块图表", "Show this module's visual": "显示本模块图表",
+  "Items per list": "每个列表的项目数", "Items per list ": "每个列表的项目数 ",
+  "Life OS navigation": "Life OS 导航", "Open Life OS home": "打开 Life OS 首页",
+  "Open Life OS capture": "打开 Life OS 记录面板", "Open Life OS configuration": "打开 Life OS 设置",
+  "Open Life OS": "打开 Life OS", "Life OS Brain": "Life OS 大脑", "Continue setup": "继续设置",
+  "Finish your Life OS setup": "完成 Life OS 设置", "Review the checklist.": "查看设置清单。",
+  "Every control below opens a real note, dashboard, or capture workflow.": "下方每个操作都会打开真实的笔记、仪表盘或记录流程。",
+  "Choose what matters, capture what happens, and close the day honestly.": "选择真正重要的事，记录发生的一切，坦诚地结束今天。",
+  "Keep today, this week, and this quarter connected to the same direction.": "让今天、本周和本季度指向同一个方向。",
+  "See the commitments competing for attention and return to the work that matters.": "看清正在争夺注意力的承诺，回到真正重要的工作。",
+  "Look back across days and quarters before deciding what should change next.": "先回看过去的每一天和每个季度，再决定下一步要改变什么。",
+  "Keep outcomes, next actions, people, notes, and quarter commitments together.": "把结果、下一步行动、人际、笔记和季度承诺放在一起。",
+  "Bring follow-ups, meeting context, and discussion items back to the relationship.": "把跟进、会议背景和待沟通事项放回对应的人际关系中。",
+  "Move ideas into newsletters, videos, articles, and course material without losing sources.": "把想法变成通讯、视频、文章和课程，同时保留来源。",
+  "Keep books, sources, reading, and ideas close to the work they inform.": "让书籍、资料、阅读和想法紧贴它们所支撑的工作。",
+  "Ask, review, and draft with the vault as context while every change stays visible.": "以仓库为上下文进行询问、复盘和起草，并让每次修改都清晰可见。",
+  "A private view of today’s properties. Journal text stays out of this screen.": "仅显示今日属性的私密视图，日记正文不会出现在此页。",
+  "Life OS will use your configured questions and habits.": "Life OS 将使用你配置的问题和习惯。",
+  "Rate effort from 1 to 10.": "请按 1 至 10 分评估努力程度。", "A signal, never a judgment.": "这是信号，不是评判。",
+  "See the complete context for today.": "查看今天的完整上下文。", "Run the guided evening check-in.": "开始晚间引导式复盘。",
+  "Put something into the system without breaking your flow.": "不打断心流，快速把内容记入系统。",
+  "Choose what this is. Life OS will route it to the right place.": "选择内容类型，Life OS 会把它放到正确的位置。",
+  "This view only. No vault settings changed.": "仅影响当前视图，不会修改仓库设置。",
+  "See clearly. Choose deliberately. Live fully.": "看清当下，主动选择，充分生活。",
+});
+
+function translateZhCn(value) {
+  const text = String(value ?? "");
+  if (ZH_CN[text]) return ZH_CN[text];
+  const openModule = text.match(/^Open Life OS (.+)$/);
+  if (openModule) return `打开 Life OS：${translateZhCn(openModule[1])}`;
+  const days = text.match(/^(\d+) days$/);
+  if (days) return `${days[1]} 天`;
+  const checked = text.match(/^(\d+) of (\d+) checked in$/);
+  if (checked) return `已记录 ${checked[1]} / ${checked[2]}`;
+  const unavailable = text.match(/^(.+) is unavailable\. Check that its supporting plugin is enabled\.$/);
+  if (unavailable) return `${translateZhCn(unavailable[1])}暂不可用，请检查对应插件是否已启用。`;
+  return text;
+}
+
+function isZhCn(app) {
+  try {
+    const file = app.vault.getAbstractFileByPath("Meta/Compass Config.md");
+    const locale = app.metadataCache.getFileCache(file)?.frontmatter?.locale;
+    return /^zh(?:[-_]|$)/i.test(String(locale || ""));
+  } catch (error) {
+    return false;
+  }
+}
+
+function translateRoot(root, enabled) {
+  if (!enabled || !root) return;
+  const doc = root.ownerDocument;
+  const showText = doc?.defaultView?.NodeFilter?.SHOW_TEXT || 4;
+  const walker = doc.createTreeWalker(root, showText);
+  const nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+  for (const node of nodes) {
+    const source = node.nodeValue || "";
+    const trimmed = source.trim();
+    if (!trimmed) continue;
+    const translated = translateZhCn(trimmed);
+    if (translated !== trimmed) node.nodeValue = source.replace(trimmed, translated);
+  }
+  const elements = root.matches?.("*") ? [root, ...root.querySelectorAll("*")] : [...root.querySelectorAll("*")];
+  for (const element of elements) {
+    for (const attr of ["aria-label", "title", "placeholder"]) {
+      const source = element.getAttribute?.(attr);
+      if (!source) continue;
+      const translated = translateZhCn(source);
+      if (translated !== source) element.setAttribute(attr, translated);
+    }
+  }
+}
+
 function normalizeFolder(value, fallback) {
   const normalized = String(value || fallback)
     .trim()
@@ -539,6 +652,7 @@ class LifeOSCaptureModal extends Modal {
         });
       }
     }
+    translateRoot(root, isZhCn(this.app));
   }
 
   onClose() {
@@ -562,6 +676,8 @@ class LifeOSHomeView extends ItemView {
     this.focusGroup = "all";
     this.libraryStatus = "all";
     this.compactLayout = false;
+    this.zhCn = false;
+    this.translationObserver = null;
   }
 
   getViewType() {
@@ -577,6 +693,20 @@ class LifeOSHomeView extends ItemView {
   }
 
   async onOpen() {
+    this.zhCn = isZhCn(this.app);
+    if (this.zhCn) {
+      const Observer = this.contentEl.ownerDocument?.defaultView?.MutationObserver;
+      if (Observer) {
+        this.translationObserver = new Observer((records) => {
+          for (const record of records) {
+            for (const node of record.addedNodes || []) {
+              translateRoot(node.nodeType === 1 ? node : node.parentElement, true);
+            }
+          }
+        });
+        this.translationObserver.observe(this.contentEl, { childList: true, subtree: true });
+      }
+    }
     const refresh = () => this.queueRefresh();
     this.registerEvent(this.app.metadataCache.on("changed", refresh));
     this.registerEvent(this.app.vault.on("create", refresh));
@@ -592,6 +722,8 @@ class LifeOSHomeView extends ItemView {
     if (this.refreshTimer) {
       clearTimeout(this.refreshTimer);
     }
+    this.translationObserver?.disconnect();
+    this.translationObserver = null;
     this.contentEl.empty();
   }
 
@@ -633,6 +765,7 @@ class LifeOSHomeView extends ItemView {
       const host = main.createDiv({ cls: "life-os-brain-embedded" });
       this.embeddedBrain = new LifeOSBrainRenderer(this.app, host);
       this.addChild(this.embeddedBrain);
+      translateRoot(root, this.zhCn);
       return;
     }
     const shell = main.createDiv({ cls: "life-os-shell" });
@@ -641,6 +774,7 @@ class LifeOSHomeView extends ItemView {
     } else {
       this.renderModule(shell);
     }
+    translateRoot(root, this.zhCn);
   }
 
   closeBrain() {
@@ -2646,6 +2780,10 @@ class LifeOSBrainView extends ItemView {
 }
 
 module.exports = class LifeOSPlugin extends Plugin {
+  t(text) {
+    return isZhCn(this.app) ? translateZhCn(text) : text;
+  }
+
   async onload() {
     this.registerView("life-os-brain", (leaf) => new LifeOSBrainView(leaf));
     this.registerView(
@@ -2653,32 +2791,32 @@ module.exports = class LifeOSPlugin extends Plugin {
       (leaf) => new LifeOSHomeView(leaf, this)
     );
 
-    this.addRibbonIcon("compass", "Open Life OS", () => {
+    this.addRibbonIcon("compass", this.t("Open Life OS"), () => {
       void this.activateView();
     });
 
     this.addCommand({
       id: "open-home",
-      name: "Open Life OS home",
+      name: this.t("Open Life OS home"),
       callback: () => this.activateView("home"),
     });
 
     this.addCommand({
       id: "open-capture",
-      name: "Open Life OS capture",
+      name: this.t("Open Life OS capture"),
       callback: () => this.openCapture(),
     });
 
     this.addCommand({
       id: "open-configuration",
-      name: "Open Life OS configuration",
+      name: this.t("Open Life OS configuration"),
       callback: () => this.app.workspace.openLinkText("Meta/Compass Config", "", true),
     });
 
     for (const item of NAV_ITEMS.filter((item) => item.id !== "home")) {
       this.addCommand({
         id: `open-${item.id}`,
-        name: `Open Life OS ${item.label}`,
+        name: this.t(`Open Life OS ${item.label}`),
         callback: () => this.activateView(item.id),
       });
     }
@@ -2715,9 +2853,7 @@ module.exports = class LifeOSPlugin extends Plugin {
     const ran = this.app.commands.executeCommandById(commandId);
 
     if (!ran) {
-      new Notice(
-        `${label} is unavailable. Check that its supporting plugin is enabled.`
-      );
+      new Notice(this.t(`${label} is unavailable. Check that its supporting plugin is enabled.`));
     }
 
     return ran;

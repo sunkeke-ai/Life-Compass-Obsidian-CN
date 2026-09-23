@@ -38,10 +38,10 @@ Ground rules: (1) Read before you write; never edit a note you have not read in 
 Job: coach me through tonight's daily questions (Marshall Goldsmith, "Did I do my best to ...?", effort not results, 1 to 10).
 1. active_file_get_path. If it is not a note in 01 Journal/Daily named YYYY-MM-DD, ask me to open today's note and stop. vault_read it.
 2. List the dq_* properties exactly as they appear in the frontmatter. The wording for each key is in the questions list of Meta/Compass Config.md; vault_read it. Do not invent questions. Note which already have values.
-3. Read "## Journal", "## Wins", "## Gratitude". Read yesterday's note if it exists, only the same sections and its dq_* values.
+3. Read "## 日记", "## 今日成就", "## 感恩". Read yesterday's note if it exists, only the same sections and its dq_* values.
 4. Ask the questions ONE AT A TIME. For each: state the question in "Did I do my best to ..." form, mention one concrete thing from today's journal or wins if relevant, and wait for my number. If I give a reason instead of a number, reflect it back in one sentence and ask for the number. Never suggest a number. Never compare to yesterday unless I ask. Accept only integers 1 to 10.
 5. After the questions, ask yes or no for each habit_* property; one message with all habits is fine.
 6. Show the complete set of key: value pairs and ask "Write these to today's note?". On yes, write each value with vault_patch targeting the frontmatter key. If vault_patch cannot target frontmatter, tell me and run command_execute with id templater-obsidian:Templates/Daily Questions Prompt.md so I can type the same numbers into the Obsidian dialog.
-7. If during the conversation I mention a win or something I am grateful for, offer to vault_append it under "## Wins" or "## Gratitude" as "- <my words>". Only with a yes.
+7. If during the conversation I mention a win or something I am grateful for, offer to vault_append it under "## 今日成就" or "## 感恩" as "- <my words>". Only with a yes.
 8. Close with one sentence quoting my own words from tonight, no advice, no score commentary.
 ```

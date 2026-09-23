@@ -1,8 +1,8 @@
-Use a configured agent inside the vault through Agent Client. The workflows ask the agent to follow `AGENTS.md`; that is a policy, not a technical guarantee that every client will request approval. Check that automatic approvals are off in the client you use. Setup: [[14 Agent Client and Claude Code]]. Without the plugin, read a note in `Prompts/` and copy its Prompt section into your chosen agent ([[20 Prompt Library]]).
+通过 Agent Client 在仓库中使用已配置的智能体。工作流会要求智能体遵守 `AGENTS.md`，但这是工作规则，不是每个客户端都会请求审批的技术保证。请确认你使用的客户端已关闭自动批准。设置说明：[[14 Agent Client and Claude Code]]。如果没有该插件，可打开 `Prompts/` 中的笔记，将 Prompt 部分复制到你选择的智能体中（[[20 Prompt Library]]）。
 
-## Before you send
+## 发送之前
 
-The buttons below prepare a prompt with automatic sending disabled. Review it in the composer before sending. This embedded chat is configured to use the hosting Assistant note as context, not to guarantee inclusion of whichever other note you last viewed.
+下方按钮会生成提示词，但不会自动发送。请先在输入框中审阅内容。嵌入式对话会使用当前 Assistant 笔记作为上下文，不保证自动包含你上一篇查看的其他笔记。
 
 - Check the selected agent, mentioned notes, attachments, and linked-note expansion settings.
 - A provider-backed conversation can send your prompt and included or subsequently retrieved notes to that provider. Journal and relationship notes can contain sensitive personal information.
@@ -10,131 +10,131 @@ The buttons below prepare a prompt with automatic sending disabled. Review it in
 - Approving a context selection is not approval to edit, install, spend, or publish.
 - A configured agent or local API key is not proof of authentication, a working connection, or a successfully tested workflow.
 
-The first-party Life OS dashboard does not make provider calls. These controls hand off to Agent Client; its settings, external clients, and the chosen agent determine actual behavior.
+Life OS 自带仪表盘不会直接调用模型服务商。这些控件会把任务交给 Agent Client，实际行为取决于其设置、外部客户端和所选智能体。
 
-## Daily
+## 每日
 ```agent
 type: button
-text: "Start my day"
+text: "开始我的一天"
 prompt: "Read Prompts/01 Morning Start.md with vault_read and follow its Prompt section for the note I have open (or the current period if none applies)."
 viewType: embed
 autoSend: false
 ```
 ```agent
 type: button
-text: "Coach me through tonight's questions"
+text: "引导我完成今晚的自省"
 prompt: "Read Prompts/02 End of Day Coaching.md with vault_read and follow its Prompt section for the note I have open (or the current period if none applies)."
 viewType: embed
 autoSend: false
 ```
 ```agent
 type: button
-text: "What matters today"
+text: "今天最重要的事"
 prompt: "Read Prompts/14 What Matters Today.md with vault_read and follow its Prompt section for the note I have open (or the current period if none applies)."
 viewType: embed
 autoSend: false
 ```
 
-## Weekly and quarterly
+## 每周与每季度
 ```agent
 type: button
-text: "Review this week"
+text: "复盘本周"
 prompt: "Read Prompts/03 Weekly Review.md with vault_read and follow its Prompt section for the note I have open (or the current period if none applies)."
 viewType: embed
 autoSend: false
 ```
 ```agent
 type: button
-text: "Prepare my retreat"
+text: "准备个人静修复盘"
 prompt: "Read Prompts/04 Retreat Prep.md with vault_read and follow its Prompt section for the note I have open (or the current period if none applies)."
 viewType: embed
 autoSend: false
 ```
 ```agent
 type: button
-text: "Facilitate this retreat"
+text: "引导这次静修复盘"
 prompt: "Read Prompts/05 Retreat Facilitation.md with vault_read and follow its Prompt section for the note I have open (or the current period if none applies)."
 viewType: embed
 autoSend: false
 ```
 ```agent
 type: button
-text: "Trends in my questions and habits"
+text: "分析我的自省和习惯趋势"
 prompt: "Read Prompts/13 Trend Analysis.md with vault_read and follow its Prompt section for the note I have open (or the current period if none applies)."
 viewType: embed
 autoSend: false
 ```
 
-## Work
+## 工作
 ```agent
 type: button
-text: "Triage my inbox"
+text: "整理我的收件箱"
 prompt: "Read Prompts/06 Task Triage.md with vault_read and follow its Prompt section for the note I have open (or the current period if none applies)."
 viewType: embed
 autoSend: false
 ```
 ```agent
 type: button
-text: "Prep this meeting"
+text: "准备这场会议"
 prompt: "Read Prompts/07 Meeting Prep.md with vault_read and follow its Prompt section for the note I have open (or the current period if none applies)."
 viewType: embed
 autoSend: false
 ```
 ```agent
 type: button
-text: "Kick off this project"
+text: "启动这个项目"
 prompt: "Read Prompts/08 Project Kickoff.md with vault_read and follow its Prompt section for the note I have open (or the current period if none applies)."
 viewType: embed
 autoSend: false
 ```
 ```agent
 type: button
-text: "Groom my boards"
+text: "整理我的看板"
 prompt: "Read Prompts/09 Board Grooming.md with vault_read and follow its Prompt section for the note I have open (or the current period if none applies)."
 viewType: embed
 autoSend: false
 ```
 
-## Writing and research
+## 写作与研究
 ```agent
 type: button
-text: "Work on this piece"
+text: "继续打磨这篇内容"
 prompt: "Read Prompts/10 Writing Pipeline.md with vault_read and follow its Prompt section for the note I have open (or the current period if none applies)."
 viewType: embed
 autoSend: false
 ```
 ```agent
 type: button
-text: "SEO pre-publish audit"
+text: "发布前 SEO 检查"
 prompt: "Read Prompts/11 SEO Pre-publish Audit.md with vault_read and follow its Prompt section for the note I have open (or the current period if none applies)."
 viewType: embed
 autoSend: false
 ```
 ```agent
 type: button
-text: "File this page in the wiki"
+text: "将此页收录到知识库"
 prompt: "Read Prompts/12 Research Capture.md with vault_read and follow its Prompt section for the note I have open (or the current period if none applies)."
 viewType: embed
 autoSend: false
 ```
 
-## System
+## 系统
 ```agent
 type: button
-text: "Vault health check"
+text: "仓库健康检查"
 prompt: "Read Prompts/15 Vault Health Check.md with vault_read and follow its Prompt section for the note I have open (or the current period if none applies)."
 viewType: embed
 autoSend: false
 ```
 ```agent
 type: button
-text: "Help me set up this vault"
+text: "帮我设置这个仓库"
 prompt: "Read Prompts/16 Onboarding Assistant.md with vault_read and follow its Prompt section for the note I have open (or the current period if none applies)."
 viewType: embed
 autoSend: false
 ```
 
-## Chat
+## 对话
 ```agent-client
 type: chat
 agent: claude-code-acp

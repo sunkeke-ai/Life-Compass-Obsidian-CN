@@ -11,25 +11,25 @@ let how = "";
 if (!page) {
   const q = moment().quarter(), yr = moment().year();
   page = dv.page(`${FOLDER}/${yr}-Q${q} Personal Retreat`);
-  how = page ? `this quarter (${yr}-Q${q})` : "";
+  how = page ? `本季度 (${yr}-Q${q})` : "";
 }
 if (!page) {
   const all = dv.pages(`"${FOLDER}"`).where(p => /^\d{4}-Q[1-4] Personal Retreat$/.test(p.file.name)).sort(p => p.file.name, "desc").array();
   page = all[0];
-  how = page ? "most recent retreat" : "";
+  how = page ? "最近一次静修复盘" : "";
 }
 
 const root = dv.container.createEl("div", { cls: "lifeos-widget" });
 if (!page) {
-  root.createEl("p", { text: `No personal retreat note found in ${FOLDER}. Create one named "YYYY-QN Personal Retreat" (for example ${moment().year()}-Q${moment().quarter()} Personal Retreat) and fill in the ${PREFIX}* properties.` });
+  root.createEl("p", { text: `在 ${FOLDER} 中尚未找到个人静修复盘笔记。请创建名为“YYYY-QN Personal Retreat”的笔记，并填写 ${PREFIX}* 属性。` });
 } else {
   const fm = page.file.frontmatter || {};
   const axes = Object.keys(fm)
     .filter(k => k.startsWith(PREFIX) && fm[k] !== null && fm[k] !== "" && !isNaN(Number(fm[k])))
     .map(k => ({ key: k, name: k.slice(PREFIX.length).replace(/[_-]+/g, " ").replace(/\b\w/g, c => c.toUpperCase()), v: Math.max(0, Math.min(10, Number(fm[k]))) }));
-  if (how) root.createEl("p", { text: `Source: ${page.file.name} (${how})` }).style.opacity = "0.7";
+  if (how) root.createEl("p", { text: `数据来源：${page.file.name} (${how})` }).style.opacity = "0.7";
   if (axes.length < 3) {
-    root.createEl("p", { text: `Retreat note ${page.file.name} has fewer than 3 filled ${PREFIX}* properties.` });
+    root.createEl("p", { text: `复盘笔记 ${page.file.name} 中已填写的 ${PREFIX}* 属性少于 3 项。` });
   } else {
     const n = axes.length, cx = 170, cy = 160, R = 105, W = 340, H = 320;
     const ang = i => -Math.PI / 2 + i * 2 * Math.PI / n;
@@ -53,6 +53,6 @@ if (!page) {
     root.createEl("div", { cls: "lifeos-chart" }).innerHTML = svg;
     const avg = axes.reduce((s, a) => s + a.v, 0) / n;
     const low = [...axes].sort((a, b) => a.v - b.v)[0];
-    root.createEl("p", { text: `Average ${avg.toFixed(1)} / 10. Lowest area: ${low.name} (${low.v}). That is the candidate for the next 90 days.` });
+    root.createEl("p", { text: `平均分 ${avg.toFixed(1)} / 10。最低领域：${low.name} (${low.v})。可优先将它作为未来 90 天的关注方向。` });
   }
 }

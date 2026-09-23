@@ -48,7 +48,7 @@ const from = q.clone().startOf("quarter"), to = q.clone().endOf("quarter");
 const cfg = dv.page("Meta/Compass Config") || {};
 const pages = dv.pages(`"${cfg.daily_folder || "01 Journal/Daily"}"`).where(p => /^\d{4}-\d{2}-\d{2}$/.test(p.file.name) && moment(p.file.name).isBetween(from, to, "day", "[]")).sort(p => p.file.name);
 const wins = [];
-for (const p of pages) for (const L of p.file.lists) if (L.section && L.section.subpath === "Wins") wins.push(`${p.file.link}: ${L.text}`);
+for (const p of pages) for (const L of p.file.lists) if (L.section && L.section.subpath === "今日成就") wins.push(`${p.file.link}: ${L.text}`);
 if (wins.length) dv.list(wins); else dv.paragraph("*No wins logged this quarter.*");
 ```
 What stood out:

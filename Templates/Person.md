@@ -7,18 +7,18 @@ meets:
 tags:
   - person
 ---
-Tag: `#p/<% tp.file.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "") %>`
+标签：`#p/<% tp.file.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "") %>`
 
-Capture "remember to talk to them about X" as a task with `#discuss #p/<% tp.file.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "") %>` anywhere in the vault. Open this note before the meeting.
+将“记得和对方讨论 X”记录为带有 `#discuss #p/<% tp.file.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "") %>` 的任务。会议前打开本笔记查看背景。
 
 ```agent
 type: button
-text: "Prep this meeting"
+text: "准备这场会议"
 prompt: "Read Prompts/07 Meeting Prep.md with vault_read and follow its Prompt section for the note I have open (or the current period if none applies)."
 viewType: right-pane
 ```
 
-## To discuss
+## 待沟通
 ```tasks
 not done
 tags include #discuss
@@ -26,7 +26,7 @@ tags include #p/<% tp.file.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").repla
 sort by created
 ```
 
-## Open tasks involving them
+## 与对方有关的未完成任务
 ```tasks
 not done
 tags include #p/<% tp.file.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "") %>
@@ -34,15 +34,15 @@ tags do not include #discuss
 sort by due
 ```
 
-## Projects together
+## 共同项目
 ```dataview
 LIST
 FROM "04 Projects"
 WHERE contains(people, this.file.link) AND status != "done"
 ```
 
-## Notes
+## 笔记
 
 
-## Meeting log
+## 会议记录
 - <% tp.date.now("YYYY-MM-DD") %> 

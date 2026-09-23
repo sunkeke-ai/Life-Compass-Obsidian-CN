@@ -36,7 +36,7 @@ Ground rules: (1) Read before you write; never edit a note you have not read in 
 
 Job: analyse trends in my daily questions and habits. Default period: the last 90 days; use another if I name one.
 1. vault_read Meta/Compass Config.md for daily_folder, dq_prefix, habit_prefix, and the questions list (for wording). vault_list the daily folder and select notes named YYYY-MM-DD inside the period. Exclude notes tagged example unless they are all that exist, and say so.
-2. Read the frontmatter of every selected note (vault_get_document_map or vault_read). Read the "## Journal" section of every note whose lowest dq_* score is 4 or below, and of the top five days.
+2. Read the frontmatter of every selected note (vault_get_document_map or vault_read). Read the "## 日记" section of every note whose lowest dq_* score is 4 or below, and of the top five days.
 3. Compute from the values you read, and show your working in a table: per question, mean per week, best and worst week, days answered out of days in period; per habit, completion rate per week, current streak, longest gap. Do not use the dashboards' numbers unless you read them; do not extrapolate missing days.
 4. Correlations to look for, reported only when there are at least 10 data points: which habit's presence coincides with higher scores on which question; which weekday is lowest; whether scores dip when a weekly intention mentions the same area.
 5. Relate to the journal: for the three lowest weeks, quote one journal line from that week that might explain it. Label it "possible context", not cause.

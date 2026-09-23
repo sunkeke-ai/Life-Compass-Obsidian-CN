@@ -24,7 +24,7 @@ for (const p of pages) {
 
 const root = dv.container.createEl("div", { cls: "lifeos-widget" });
 if (habits.size === 0) {
-  root.createEl("p", { text: `No checkbox properties starting with "${PREFIX}" found in ${FOLDER} yet. Add some to Templates/Daily Note.md and start checking them off.` });
+  root.createEl("p", { text: `在 ${FOLDER} 中尚未找到以“${PREFIX}”开头的复选框属性。请先在每日笔记模板中添加习惯。` });
 } else {
   const today = moment().startOf("day");
   const fmt = d => d.format("YYYY-MM-DD");
@@ -64,7 +64,7 @@ if (habits.size === 0) {
 
   const table = root.createEl("table", { cls: "lifeos-table" });
   const thead = table.createEl("thead").createEl("tr");
-  for (const h of ["Habit", `Last ${DAYS} days`, "Current", "Best", "Longest break", "Completion", "Total"]) thead.createEl("th", { text: h });
+  for (const h of ["习惯", `最近 ${DAYS} 天`, "当前连续", "最佳连续", "最长中断", "完成率", "总次数"]) thead.createEl("th", { text: h });
   const tbody = table.createEl("tbody");
   for (const r of rows) {
     const tr = tbody.createEl("tr");
@@ -76,5 +76,5 @@ if (habits.size === 0) {
     tr.createEl("td", { text: r.pct + "%" });
     tr.createEl("td", { text: String(r.total) });
   }
-  root.createEl("p", { text: "● done   ○ tracked but missed   · no daily note", cls: "lifeos-legend" }).style.opacity = "0.6";
+  root.createEl("p", { text: "● 已完成   ○ 已跟踪但未完成   · 无每日笔记", cls: "lifeos-legend" }).style.opacity = "0.6";
 }

@@ -9,34 +9,31 @@ const root = dv.container.createEl("div", { cls: "lifeos-widget" });
 
 const now = moment();
 const links = [
-  ["Today", `${DAILY}/${now.format("YYYY-MM-DD")}`, now.format("YYYY-MM-DD")],
-  ["This week", `${WEEKLY}/${now.format("gggg-[W]ww")}`, now.format("gggg-[W]ww")],
-  ["This quarter", `${QUARTERLY}/${now.format("YYYY-[Q]Q")}`, now.format("YYYY-[Q]Q")],
-  ["Retreat", `${RETREATS}/${now.format("YYYY-[Q]Q")} Personal Retreat`, `${now.format("YYYY-[Q]Q")} Personal Retreat`],
+  ["今天", `${DAILY}/${now.format("YYYY-MM-DD")}`, now.format("YYYY-MM-DD")],
+  ["本周", `${WEEKLY}/${now.format("gggg-[W]ww")}`, now.format("gggg-[W]ww")],
+  ["本季度", `${QUARTERLY}/${now.format("YYYY-[Q]Q")}`, now.format("YYYY-[Q]Q")],
+  ["静修复盘", `${RETREATS}/${now.format("YYYY-[Q]Q")} Personal Retreat`, `${now.format("YYYY-[Q]Q")} Personal Retreat`],
 ];
 const p = root.createEl("p");
-p.appendText("Jump: ");
+p.appendText("快速前往：");
 links.forEach(([lab, path, name], i) => {
   if (i) p.appendText("  ·  ");
   const a = p.createEl("a", { text: `${lab} (${name})`, cls: "internal-link", attr: { href: name, "data-href": name } });
   a.addEventListener("click", e => { e.preventDefault(); app.workspace.openLinkText(name, path, false); });
 });
 
-// Buttons resolve the QuickAdd choice by NAME at click time, so ids may change freely.
+// Stable ids keep localized display names independent from command routing.
 const buttons = [
-  ["📝 Journal entry", "Journal entry", "lifeos-journal"],
-  ["🏆 Log a win", "Log a win", "lifeos-win"],
-  ["🙏 Gratitude", "Gratitude", "lifeos-gratitude"],
-  ["✅ Add task", "Add task", "lifeos-task"],
+  ["📝 记录日记", "lifeos-journal"],
+  ["🏆 记录成就", "lifeos-win"],
+  ["🙏 记录感恩", "lifeos-gratitude"],
+  ["✅ 添加任务", "lifeos-task"],
 ];
 const wrap = root.createEl("div", { cls: "lifeos-buttons" });
-for (const [lab, name, fallbackId] of buttons) {
+for (const [lab, choiceId] of buttons) {
   const b = wrap.createEl("button", { text: lab });
   b.addEventListener("click", () => {
-    const qa = app.plugins?.plugins?.quickadd;
-    const choice = qa?.settings?.choices?.find(c => (c.name || "").includes(name));
-    const id = `quickadd:choice:${choice ? choice.id : fallbackId}`;
-    const ok = app.commands.executeCommandById(id);
-    if (!ok) new Notice(`QuickAdd choice "${name}" not found or not enabled as a command. Check QuickAdd settings.`);
+    const ok = app.commands.executeCommandById(`quickadd:choice:${choiceId}`);
+    if (!ok) new Notice(`QuickAdd 命令 ${choiceId} 不存在或尚未启用，请检查 QuickAdd 设置。`);
   });
 }

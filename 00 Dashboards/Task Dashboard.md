@@ -1,21 +1,21 @@
-This page is a **recommendation engine**, not the place the day gets executed. Read it, pick what you will actually do, time block it (paper notebook or calendar). "The computer is the brain, the notebook is the list."
+本页是一个**任务建议引擎**，不是真正执行今日计划的地方。查看建议后，选择你真正要做的事，再放入纸质笔记本或日历的时间块中。“电脑是大脑，笔记本是清单。”
 
 ```agent
 type: button
-text: "Triage my inbox"
+text: "整理我的收件箱"
 prompt: "Read Prompts/06 Task Triage.md with vault_read and follow its Prompt section for the note I have open (or the current period if none applies)."
 viewType: right-pane
 ```
 ```agent
 type: button
-text: "What matters today"
+text: "今天最重要的事"
 prompt: "Read Prompts/14 What Matters Today.md with vault_read and follow its Prompt section for the note I have open (or the current period if none applies)."
 viewType: right-pane
 ```
 
-Capture everything to [[Tasks]] (the master list you never read) with the QuickAdd command **Add task**. Tag `#project/<slug>` or `#p/<person>` to route a task to its context. The queries below surface the right tasks at the right time.
+使用 QuickAdd 命令**添加任务**，把所有事项记录到 [[Tasks|任务总表]]。通过 `#project/<slug>` 或 `#p/<person>` 标签将任务路由到对应情境。下方查询会在合适的时间呈现合适的任务。
 
-## Overdue
+## 已逾期
 ```tasks
 not done
 path does not include wiki/
@@ -24,7 +24,7 @@ sort by due
 group by filename
 ```
 
-## Today
+## 今天
 ```tasks
 not done
 path does not include wiki/
@@ -34,7 +34,7 @@ sort by priority
 group by filename
 ```
 
-## Next 7 days
+## 未来 7 天
 ```tasks
 not done
 path does not include wiki/
@@ -44,7 +44,7 @@ sort by due
 group by due
 ```
 
-## To discuss (by person)
+## 待沟通（按联系人）
 ```tasks
 not done
 path does not include wiki/
@@ -53,7 +53,7 @@ group by tags
 sort by created
 ```
 
-## High priority without a date
+## 无日期的高优先级任务
 ```tasks
 not done
 path does not include wiki/
@@ -62,7 +62,7 @@ no due date
 group by filename
 ```
 
-## Inbox (untagged, undated, needs a home)
+## 收件箱（无标签、无日期、待归类）
 ```tasks
 not done
 path does not include wiki/
@@ -73,7 +73,7 @@ tags do not include #p/
 limit 25
 ```
 
-## Done this week
+## 本周已完成
 ```tasks
 done after 7 days ago
 path does not include wiki/

@@ -15,8 +15,8 @@ for (const [, block] of buttons) {
   assert.ok(promptPath, "Workflow must name a local prompt");
   assert.ok(fs.existsSync(path.join(root, promptPath[1])), "Named prompt must exist");
 }
-assert.match(source, /## Before you send/);
-assert.match(source, /policy, not a technical guarantee/);
+assert.match(source, /## (?:Before you send|发送之前)/);
+assert.match(source, /(?:policy, not a technical guarantee|工作规则，不是每个客户端都会请求审批的技术保证)/);
 assert.match(source, /noteContext: hosting/);
 assert.match(source, /not proof of authentication/);
 console.log("Assistant contracts passed: 16 explicit non-auto-send workflows, local prompt paths, context and authority disclosure. Native client behavior not tested.");

@@ -40,9 +40,9 @@ Ground rules: (1) Read before you write; never edit a note you have not read in 
 
 Job: start my day.
 1. Work out today's date and the file 01 Journal/Daily/<YYYY-MM-DD>.md. If it does not exist, run command_execute with id quickadd:choice:lifeos-daily so Obsidian creates it from the template, then vault_read it. Otherwise open_file it and vault_read it.
-2. vault_read this week's note 01 Journal/Weekly/<gggg-Www>.md and take the three lines under "## Weekly intentions". If the week note does not exist, tell me and continue without it.
+2. vault_read this week's note 01 Journal/Weekly/<gggg-Www>.md and take the three lines under "## 本周意图". If the week note does not exist, tell me and continue without it.
 3. Find tasks due or scheduled today or overdue: vault_read 08 Tasks/Tasks.md, then use search_simple for "📅 <today>" and "⏳ <today>" across the vault, excluding wiki/ and 09 Reading/Reading Plan. Do not list reading plan items; just say "reading is scheduled" if any exist.
-4. Look for "On this day" entries: vault_list 01 Journal/Daily and pick files ending in the same -MM-DD in earlier years. If any exist, vault_get_document_map or vault_read their "## Journal" section and quote one line verbatim with the year.
+4. Look for "往年今日" entries: vault_list 01 Journal/Daily and pick files ending in the same -MM-DD in earlier years. If any exist, vault_get_document_map or vault_read their "## 日记" section and quote one line verbatim with the year.
 5. Reply in this shape, under 200 words: "Intentions this week" (the three lines), "Due today" (task lines as written, with their source note), "Overdue" (same), "From a past year" (the quote or "nothing yet"), and one question for me to answer in the journal tonight, based on yesterday's journal if it exists.
-6. Do not write anything. If I answer your question and say "log it", vault_append "- <HH:mm> <my words>" under "## Journal" in today's note after showing me the line.
+6. Do not write anything. If I answer your question and say "log it", vault_append "- <HH:mm> <my words>" under "## 日记" in today's note after showing me the line.
 ```

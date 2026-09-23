@@ -9,30 +9,30 @@ sources: []
 tags:
   - writing/newsletter
 ---
-> Writing is a task where the text lives in the note itself. Source material and draft share the vault: link the book note, embed the quote, keep writing. Move the card on [[Newsletter Board]] as this progresses. When done, export the markdown to your newsletter platform.
+> 写作的正文直接保存在笔记中。素材与草稿共享同一个仓库：链接读书笔记，嵌入引文，然后继续写作。随着进展移动 [[Newsletter Board|通讯看板]] 中的卡片。完成后，将 Markdown 导出到通讯发布平台。
 
 ```agent
 type: button
-text: "Work on this piece"
+text: "继续打磨这篇内容"
 prompt: "Read Prompts/10 Writing Pipeline.md with vault_read and follow its Prompt section for the note I have open (or the current period if none applies)."
 viewType: right-pane
 ```
 ```agent
 type: button
-text: "SEO pre-publish audit"
+text: "发布前 SEO 检查"
 prompt: "Read Prompts/11 SEO Pre-publish Audit.md with vault_read and follow its Prompt section for the note I have open (or the current period if none applies)."
 viewType: right-pane
 ```
 
-## Hook
+## 开头钩子
 
 
-## Body
+## 正文
 
 
-## Call to action
+## 行动号召
 
 
-## Sources used
-Embed quotes with block references, for example `![[Triggers (Marshall Goldsmith)#^daily-questions]]`.
+## 已使用来源
+使用块引用嵌入摘录，例如 `![[Triggers (Marshall Goldsmith)#^daily-questions]]`。
 - 

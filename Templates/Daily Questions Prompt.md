@@ -8,12 +8,12 @@
   grade effort, not results.
 */
 const FALLBACK = [
-  ["dq_goals",         "Did I do my best to set clear goals today?"],
-  ["dq_progress",      "Did I do my best to make progress toward my goals?"],
-  ["dq_meaning",       "Did I do my best to find meaning?"],
-  ["dq_happy",         "Did I do my best to be happy?"],
-  ["dq_relationships", "Did I do my best to build positive relationships?"],
-  ["dq_engaged",       "Did I do my best to be fully engaged?"],
+  ["dq_goals",         "今天我是否尽力设定了清晰的目标？"],
+  ["dq_progress",      "今天我是否尽力推进了自己的目标？"],
+  ["dq_meaning",       "今天我是否尽力去发现意义？"],
+  ["dq_happy",         "今天我是否尽力让自己快乐？"],
+  ["dq_relationships", "今天我是否尽力建立积极的人际关系？"],
+  ["dq_engaged",       "今天我是否尽力全情投入？"],
 ];
 const file = tp.config.target_file;
 const cache = app.metadataCache.getFileCache(file) || {};
@@ -24,7 +24,7 @@ const QUESTIONS = Array.isArray(cfg.questions) && cfg.questions.length ? cfg.que
 const answers = {};
 let cancelled = false;
 for (const [key, q] of QUESTIONS) {
-  const a = await tp.system.prompt(`${q}  (1 = terrible, 10 = great)`, fm[key] ? String(fm[key]) : "");
+  const a = await tp.system.prompt(`${q}  (1 = 完全没有做到，10 = 已经尽全力)`, fm[key] ? String(fm[key]) : "");
   if (a === null) { cancelled = true; break; }
   const n = parseInt(a);
   if (!isNaN(n)) answers[key] = Math.min(10, Math.max(1, n));
@@ -33,13 +33,13 @@ if (!cancelled) {
   const habits = Object.keys(fm).filter(k => k.startsWith(HB));
   for (const h of habits) {
     const nice = h.slice(HB.length).replace(/[_-]+/g, " ");
-    const pick = await tp.system.suggester(["Yes", "No"], [true, false], false, `Habit: ${nice}?`);
+    const pick = await tp.system.suggester(["是", "否"], [true, false], false, `习惯：${nice}？`);
     if (pick === null) break;
     answers[h] = pick;
   }
 }
 if (Object.keys(answers).length) {
   await app.fileManager.processFrontMatter(file, f => { Object.assign(f, answers); });
-  new Notice(`Saved ${Object.keys(answers).length} answers to ${file.basename}`);
+  new Notice(`已将 ${Object.keys(answers).length} 项答案保存到 ${file.basename}`);
 }
 -%>

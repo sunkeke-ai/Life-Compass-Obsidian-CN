@@ -27,20 +27,20 @@ const label = k => k.slice(PREFIX.length).replace(/[_-]+/g, " ").replace(/\b\w/g
 
 const root = dv.container.createEl("div", { cls: "lifeos-widget" });
 if (keys.length === 0) {
-  root.createEl("p", { text: `No number properties starting with "${PREFIX}" found in ${FOLDER} yet. Answer your daily questions (Templates/Daily Questions Prompt.md) and they will show up here.` });
+  root.createEl("p", { text: `在 ${FOLDER} 中尚未找到以“${PREFIX}”开头的数字属性。完成每日自省后，数据会显示在这里。` });
 } else {
   const controls = root.createEl("div", { cls: "lifeos-controls" });
   let sel = null;
   if (!FIXED_FROM) {
     sel = controls.createEl("select");
-    for (const [v, l] of [[7, "Last 7 days"], [30, "Last 30 days"], [90, "Last 90 days"], [365, "Last year"], [0, "All time"]]) {
+    for (const [v, l] of [[7, "最近 7 天"], [30, "最近 30 天"], [90, "最近 90 天"], [365, "最近一年"], [0, "全部时间"]]) {
       const o = sel.createEl("option", { text: l });
       o.value = String(v);
       if (v === DEFAULT_RANGE) o.selected = true;
     }
     sel.addEventListener("change", render);
   } else {
-    controls.createEl("span", { text: `${FIXED_FROM.format("YYYY-MM-DD")} → ${FIXED_TO ? FIXED_TO.format("YYYY-MM-DD") : "today"}` });
+    controls.createEl("span", { text: `${FIXED_FROM.format("YYYY-MM-DD")} → ${FIXED_TO ? FIXED_TO.format("YYYY-MM-DD") : "今天"}` });
   }
   const toggles = {};
   keys.forEach((k, i) => {
@@ -92,7 +92,7 @@ if (keys.length === 0) {
     });
     svg += `</svg>`;
     chart.innerHTML = svg;
-    let html = `<table class="lifeos-table"><thead><tr><th>Question</th><th>Average</th><th>Min</th><th>Max</th><th>Days answered</th><th>Latest</th></tr></thead><tbody>`;
+    let html = `<table class="lifeos-table"><thead><tr><th>问题</th><th>平均值</th><th>最低</th><th>最高</th><th>回答天数</th><th>最新</th></tr></thead><tbody>`;
     for (const r of rows) html += `<tr>${r.map(c => `<td>${c}</td>`).join("")}</tr>`;
     html += `</tbody></table>`;
     tableEl.innerHTML = html;

@@ -1,5 +1,6 @@
 ---
-birthdate: 
+locale: zh-CN
+birthdate:
 life_expectancy: 80
 daily_folder: 01 Journal/Daily
 weekly_folder: 01 Journal/Weekly
@@ -12,17 +13,17 @@ wheel_prefix: wheel_
 board_done_lanes: Done,Published,Archive
 questions:
   - key: dq_goals
-    text: Did I do my best to set clear goals today?
+    text: 今天我是否尽力设定了清晰的目标？
   - key: dq_progress
-    text: Did I do my best to make progress toward my goals?
+    text: 今天我是否尽力推进了自己的目标？
   - key: dq_meaning
-    text: Did I do my best to find meaning?
+    text: 今天我是否尽力去发现意义？
   - key: dq_happy
-    text: Did I do my best to be happy?
+    text: 今天我是否尽力让自己快乐？
   - key: dq_relationships
-    text: Did I do my best to build positive relationships?
+    text: 今天我是否尽力建立积极的人际关系？
   - key: dq_engaged
-    text: Did I do my best to be fully engaged?
+    text: 今天我是否尽力全情投入？
 habits:
   - habit_journal
   - habit_exercise
