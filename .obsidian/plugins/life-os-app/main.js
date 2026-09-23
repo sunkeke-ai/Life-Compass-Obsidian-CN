@@ -89,6 +89,136 @@ const ZH_CN = Object.freeze({
   "Choose what this is. Life OS will route it to the right place.": "选择内容类型，Life OS 会把它放到正确的位置。",
   "This view only. No vault settings changed.": "仅影响当前视图，不会修改仓库设置。",
   "See clearly. Choose deliberately. Live fully.": "看清当下，主动选择，充分生活。",
+  "Active commitments": "正在进行的承诺",
+  "Active project notes from your canonical project folder.": "来自标准项目文件夹的进行中项目笔记。",
+  "Add a project idea to the board.": "向项目看板添加一个项目想法。",
+  "Add an idea to the Projects board.": "向项目看板添加一个想法。",
+  "Add an idea to the article backlog.": "向文章待办列表添加一个想法。",
+  "Add an idea to the newsletter backlog.": "向通讯待办列表添加一个想法。",
+  "Add an idea to the video backlog.": "向视频待办列表添加一个想法。",
+  "Add your habits in Configure to begin.": "请先在设置中添加习惯。",
+  "Agent Client": "Agent Client",
+  "AI tools": "AI 工具",
+  "AI-managed, human-authorized": "AI 处理，人工授权",
+  "Append a journal entry to today.": "向今日笔记追加一条内容。",
+  Articles: "文章",
+  "Board lane counts unavailable. Open the board to inspect its workflow.": "无法读取看板分栏统计，请打开看板检查工作流。",
+  "Capture an idea": "记录想法",
+  "Capture what you appreciate.": "记录你感激的事。",
+  "Check whether the plan has a place in time.": "检查计划是否已安排到具体时间。",
+  "Check which projects serve this quarter.": "检查哪些项目服务于本季度目标。",
+  "Checkbox items by actual board heading, including checked items. Not a completion percentage.": "按看板实际标题统计复选项，包括已勾选项，这不是完成率。",
+  "Click to explore linked notes": "点击探索关联笔记",
+  "Complete the guided checklist before depending on automations or AI connections.": "在依赖自动化或 AI 连接前，请先完成引导检查清单。",
+  "Counts use explicit routing tags, not inferred ownership.": "统计使用明确的路由标签，不根据内容推断归属。",
+  Courses: "课程",
+  "Create a book note in the local library.": "在本地知识库中创建读书笔记。",
+  "Create a canonical book note.": "使用标准模板创建读书笔记。",
+  "Create a canonical project note from its template.": "使用标准模板创建项目笔记。",
+  "Create a course lesson from its template.": "使用模板创建课程单元。",
+  "Create a newsletter draft from its template.": "使用模板创建通讯草稿。",
+  "Create a private person note from its template.": "使用模板创建私密联系人笔记。",
+  "Create a private relationship note from its template.": "使用模板创建私密人际关系笔记。",
+  "Create a project note with the canonical template.": "使用标准模板创建项目笔记。",
+  "Create a reading study note from its template.": "使用模板创建阅读学习笔记。",
+  "Create a reading study note.": "创建阅读学习笔记。",
+  "Create a video script from its template.": "使用模板创建视频脚本。",
+  "Create an article draft from its template.": "使用模板创建文章草稿。",
+  "Create or open today’s daily note.": "创建或打开今日笔记。",
+  "Creative notes": "创作笔记",
+  "Direction, habits, questions, and life wheel.": "方向、习惯、自省问题与生命之轮。",
+  "Drag to rotate · Shift-drag to pan · Scroll to zoom": "拖动旋转 · Shift 拖动平移 · 滚轮缩放",
+  "Edit cards in the original board.": "请在原看板中编辑卡片。",
+  "Effort, habit rhythm, and life areas.": "努力程度、习惯节律和人生领域。",
+  "Filled: done · muted: unchecked · outlined: no record. Hover a day for details.": "实心：已完成 · 浅色：未完成 · 轮廓：无记录。悬停在日期上查看详情。",
+  "Find active projects that need a next action.": "找到需要下一步行动的进行中项目。",
+  "Habit signals": "习惯信号",
+  "Highlighted days have notes. Open an existing day, or create today. Other empty days are disabled. No entries are generated automatically.": "高亮日期已有笔记。可打开已有日期，或创建今日笔记。其他空白日期不可用，系统不会自动生成内容。",
+  "How the parts connect": "各部分如何连接",
+  "Ideal week": "理想一周",
+  "Integration overview, not a live traffic trace. This screen makes no provider requests. Review selected context and permissions before sending.": "这是集成概览，不是实时流量跟踪。此页不会请求模型服务商。发送前请检查所选上下文和权限。",
+  "Library status ": "知识库状态 ",
+  "Life OS can retrieve, summarize, and draft. Review context before sending. Human approval is the operating policy, not a guarantee enforced across every connected tool.": "Life OS 可以检索、总结和起草。发送前请审阅上下文。人工审批是操作原则，但并非所有工具都会强制执行。",
+  "Life OS · local dashboard": "Life OS · 本地仪表盘",
+  "Live system": "实时系统",
+  "Loading local tasks...": "正在加载本地任务…",
+  "Local MCP bridge": "本地 MCP 桥接",
+  "Move ideas and projects through the pipeline.": "让想法和项目沿工作流向前推进。",
+  Newsletters: "通讯",
+  "No active project notes yet.": "尚无进行中的项目笔记。",
+  "No active projects yet.": "尚无进行中的项目。",
+  "No life-area scores recorded. Open Retreat from Plan to add your own.": "尚未记录人生领域评分。请在“规划”中打开静修复盘进行添加。",
+  "No people notes yet.": "尚无联系人笔记。",
+  "No typed library notes yet. Add a book or source with a type property.": "尚无带类型的知识库笔记。请添加具有 type 属性的书籍或来源笔记。",
+  "One group per indexed open task. Past scheduled dates without a current due date fall under Other. Partial indexing may omit tasks.": "每个已索引的未完成任务只归入一组。过期的计划日期如果没有当前截止日期，将归入“其他”。部分索引可能遗漏任务。",
+  "Open conversations": "待沟通事项",
+  "Open every writing pipeline.": "打开所有写作流程。",
+  "Open or create this week’s review.": "打开或创建本周复盘。",
+  "Open or create today’s note.": "打开或创建今日笔记。",
+  "Open tasks grouped by person and discussion context.": "按联系人和沟通背景查看未完成任务。",
+  "Open the Compass brief and daily context.": "打开人生罗盘摘要和每日上下文。",
+  "Open the Compass dashboard and life wheel.": "打开人生罗盘仪表盘和生命之轮。",
+  "Open the current personal retreat.": "打开当前个人静修复盘。",
+  "Open the current quarterly note.": "打开当前季度笔记。",
+  "Open the current reading plan.": "打开当前阅读计划。",
+  "Open the full graph in this dashboard.": "在此仪表盘中打开完整图谱。",
+  "Open the governed AI workspace.": "打开受控的 AI 工作区。",
+  "Open the task dashboard and its AI workflow.": "打开任务仪表盘及其 AI 工作流。",
+  "Open the task recommendation dashboard.": "打开任务建议仪表盘。",
+  "Open writing and project boards.": "打开写作与项目看板。",
+  "Permission policy": "权限策略",
+  "Project momentum": "项目动力",
+  "Projects board": "项目看板",
+  "Projects currently asking for attention.": "当前需要关注的项目。",
+  "Projects dashboard": "项目仪表盘",
+  "Prompt library": "提示词库",
+  "Provider · authentication not tested here": "模型服务商 · 此处未测试身份验证",
+  "Quarter plan": "季度计划",
+  "Reading vault links…": "正在读取仓库链接…",
+  "Record something worth remembering.": "记录值得记住的事。",
+  "Relationship notes, kept local and opened in place.": "人际关系笔记保存在本地，并在原位打开。",
+  "Reset view": "重置视图",
+  "Return to the whole-life overview.": "返回人生全景概览。",
+  "Review AI, MCP, and backup readiness.": "检查 AI、MCP 和备份的就绪状态。",
+  "Review active projects and ideas.": "查看进行中的项目和想法。",
+  "Review active projects and quarter alignment.": "检查进行中的项目是否与季度方向一致。",
+  "Review all active projects.": "查看所有进行中的项目。",
+  "Review current habit consistency.": "检查当前习惯的稳定性。",
+  "Review due, scheduled, priority, and discuss tasks.": "检查到期、已排期、高优先级和待沟通任务。",
+  "Review effort scores and trends.": "查看努力评分和趋势。",
+  "Review streaks, gaps, and completion.": "检查连续记录、中断和完成情况。",
+  "Sample board excluded from workflow counts.": "示例看板已从工作流统计中排除。",
+  "Search books, sources, and connected notes.": "搜索书籍、来源和关联笔记。",
+  "Search people": "搜索联系人",
+  "Search the vault for a person or meeting context.": "在仓库中搜索联系人或会议背景。",
+  "See consistency alongside the days that explain it.": "在可见具体日期背景的同时，查看习惯稳定性。",
+  "See the full task system.": "查看完整任务系统。",
+  "See the source of these life-area scores.": "查看这些人生领域评分的来源。",
+  "Selected context →": "已选上下文 →",
+  "Send a task to the master inbox.": "将任务发送到总收件箱。",
+  "Showing the 60 most connected notes. Search to narrow the list.": "正在显示关联度最高的 60 篇笔记。可使用搜索缩小范围。",
+  "Start with the current day.": "从今天开始。",
+  "Task recommendations": "任务建议",
+  "Two separate integration paths ↓": "两条独立的集成路径 ↓",
+  "Type ": "类型 ",
+  "Typed library notes, including finished books and sources. Samples excluded.": "带类型的知识库笔记，包括已读完书籍和来源，不包含示例。",
+  "Use the complete prompt library.": "使用完整提示词库。",
+  "Use the library in active creative work.": "在当前创作中使用知识库。",
+  Videos: "视频",
+  "Whole-life review": "人生全景复盘",
+  active: "进行中",
+  drafting: "起草中",
+  reading: "阅读中",
+  planning: "规划中",
+  paused: "已暂停",
+  done: "已完成",
+  complete: "已完成",
+  completed: "已完成",
+  archived: "已归档",
+  "Example Project - Compass Vault": "示例项目：Compass 仓库",
+  "Example Person - Alex Rivera": "示例联系人：Alex Rivera",
+  "Example Newsletter - Effort not results": "示例通讯：关注努力，而非结果",
+  "Example Study Note - In the Beginning": "示例学习笔记：起初",
 });
 
 function translateZhCn(value) {
@@ -100,6 +230,38 @@ function translateZhCn(value) {
   if (days) return `${days[1]} 天`;
   const checked = text.match(/^(\d+) of (\d+) checked in$/);
   if (checked) return `已记录 ${checked[1]} / ${checked[2]}`;
+  const noteCount = text.match(/^(\d+) notes?$/);
+  if (noteCount) return `${noteCount[1]} 篇笔记`;
+  const matching = text.match(/^Showing (\d+) of (\d+) matching notes\.$/);
+  if (matching) return `显示 ${matching[1]} / ${matching[2]} 篇匹配笔记。`;
+  const projectTasks = text.match(/^(\d+) tagged open · (\d+) overdue( · partial index)?$/);
+  if (projectTasks) return `${projectTasks[1]} 个已标记未完成任务 · ${projectTasks[2]} 个已逾期${projectTasks[3] ? " · 部分索引" : ""}`;
+  const scoredRange = text.match(/^(\d+) scored days in (\d+) days · (.+)\. Missing days are not zero\.( Samples included\.| Samples excluded\.)$/);
+  if (scoredRange) {
+    const score = scoredRange[3] === "No effort scores yet"
+      ? "尚无努力评分"
+      : scoredRange[3].replace("mean daily effort", "每日平均努力度");
+    return `${scoredRange[2]} 天中有 ${scoredRange[1]} 天已评分 · ${score}。缺失日期不按零分计算。${scoredRange[4].includes("included") ? " 已包含示例。" : " 已排除示例。"}`;
+  }
+  const scoredDays = text.match(/^(\d+) scored days · mean of recorded daily questions$/);
+  if (scoredDays) return `${scoredDays[1]} 天已评分 · 按已记录的每日自省计算平均值`;
+  const agentState = text.match(/^Agent Client · (configured|loaded, configuration needed|unavailable)$/);
+  if (agentState) {
+    const state = { configured: "已配置", "loaded, configuration needed": "已加载，待配置", unavailable: "不可用" }[agentState[1]];
+    return `Agent Client · ${state}`;
+  }
+  const mcpState = text.match(/^Optional local tools via MCP · (key present, connection not tested|not configured)$/);
+  if (mcpState) return `可选的本地 MCP 工具 · ${mcpState[1].startsWith("key") ? "密钥已存在，连接未测试" : "未配置"}`;
+  const discussions = text.match(/^(\d+) indexed person-discussion links( · partial index)?\. Explicit person tags only\.$/);
+  if (discussions) return `${discussions[1]} 个已索引的联系人沟通链接${discussions[2] ? " · 部分索引" : ""}。仅计入带明确联系人标签的任务。`;
+  const workload = text.match(/^(.+): (\d+) of (\d+)$/);
+  if (workload) return `${translateZhCn(workload[1])}：${workload[2]} / ${workload[3]}`;
+  const latestRetreat = text.match(/^Latest scored retreat: (.+)$/);
+  if (latestRetreat) return `最近一次已评分静修复盘：${latestRetreat[1]}`;
+  const connections = text.match(/^(\d+) connections?( · Sample note)?$/);
+  if (connections) return `${connections[1]} 个连接${connections[2] ? " · 示例笔记" : ""}`;
+  const links = text.match(/^(\d+) links?( · Sample)?$/);
+  if (links) return `${links[1]} 个链接${links[2] ? " · 示例" : ""}`;
   const unavailable = text.match(/^(.+) is unavailable\. Check that its supporting plugin is enabled\.$/);
   if (unavailable) return `${translateZhCn(unavailable[1])}暂不可用，请检查对应插件是否已启用。`;
   return text;
