@@ -1,7 +1,7 @@
 ---
-template_version: 1.1.0
-built: 2026-09-09
-release_status: candidate
+template_version: 1.1.0-zh.1
+built: 2026-09-23
+release_status: pre-release
 min_obsidian: 1.13.1
 plugins:
   agent-client: "0.12.1"
@@ -16,6 +16,6 @@ plugins:
   seo: "0.5.6"
   templater-obsidian: "2.25.0"
 ---
-# Version
+# 版本
 
-This is a local candidate, not evidence of native acceptance or publication. There is no in-place updater. Back up the old vault and migrate content and custom configuration into a separate fresh copy with conflict review. See `scripts/RELEASE.md`.
+这是简体中文预发布候选版，不代表已完成 Obsidian 原生验收或公开发布。当前没有原位升级器。请先备份旧仓库，再将个人内容和自定义配置迁移到独立的新副本中，并逐项处理冲突。详见 `scripts/RELEASE.md`。

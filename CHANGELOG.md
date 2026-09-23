@@ -4,6 +4,22 @@ Format: Added, Changed, Templates (manual merge notes), Plugins, Breaking. Semve
 
 ## Unreleased
 
+## 1.1.0-zh.1 (2026-09-23)
+
+### Added
+- Add a Simplified Chinese runtime translation layer enabled by `locale: zh-CN`.
+- Add Chinese translations for the Life OS navigation, ten modules, capture modal, dynamic counts, task states, analytics, graph regions, configuration guide, Assistant safety copy, and example project content.
+- Add Chinese GitHub README, prerelease notes, repository metadata suggestions, and a publication checklist.
+
+### Changed
+- Rename the visible `00 Dashboards/Assistant.md` note to `00 Dashboards/AI 助手.md` and update routes and links.
+- Rename the visible example project note to `04 Projects/示例项目 - Compass 仓库.md` and update its reference.
+- Keep internal property prefixes, task query syntax, command ids, tags, plugin ids, and agent execution prompts unchanged for compatibility.
+
+### Verification
+- Pass 59 Life OS application checks, 16 explicit non-auto-send Assistant workflow checks, 11 release-safety tests, 163 candidate checks, and exact restoration of 211 archived files.
+- Native Obsidian acceptance, provider authentication, personal backup recovery, and independent third-party binary provenance review remain open.
+
 ### Release preparation hardening
 - Skip live personal defaults before staging; rebuild canonical boards empty instead of copying live cards; remove the arbitrary Board.md exemption; reset core machine state and omit local agent directories.
 - Add disposable archive restore verification with checksum, traversal, duplicate-path, file-type, inventory, and per-file integrity checks. Eleven release-safety tests cover core rejection paths.
