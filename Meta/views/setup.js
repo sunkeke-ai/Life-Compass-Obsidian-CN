@@ -100,7 +100,7 @@ const isLinux = navigator.userAgent.includes("Linux") && !navigator.userAgent.in
 add(3, "At least one local agent path set in Agent Client", configuredCommands.some(cmd => !isLinux || cmd.startsWith("/")), "Settings → Agent Client → choose an agent → Auto-detect", "optional; on Linux Flatpak use the full path to the wrapper, see Guide 14");
 add(3, "Agent login done (self-declared)", cur.setup_claude_login === true, "tick setup_claude_login in this note's properties", "optional; the property name is retained for upgrade compatibility");
 add(3, "Obsidian MCP server registered for your agent (self-declared)", cur.setup_mcp_registered === true, "[[19 Obsidian MCP Bridge]] then tick setup_mcp_registered", "optional");
-add(3, "Agent Client has had a conversation", (ac?.savedSessions || []).length > 0, "[[Assistant]]", "optional");
+add(3, "Agent Client has had a conversation", (ac?.savedSessions || []).length > 0, "[[AI 助手]]", "optional");
 
 // Tier 4: browser and web (optional)
 add(4, "Local REST API enabled", enabled("obsidian-local-rest-api"), "Settings → Community plugins", "optional");

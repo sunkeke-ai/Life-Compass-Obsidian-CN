@@ -15,7 +15,7 @@ Seven workflows, one vault, dashboards on top:
 | 7 | Writing | `06 Writing/*` with Kanban boards | [[09 Workflow - Writing]] |
 | + | Compass dashboard | `00 Dashboards/Compass Dashboard.md`, `Meta/views/*.js` | [[10 Compass Dashboard]] |
 | + | Kanban boards | `04 Projects/Projects Board.md`, `06 Writing/*/… Board.md`, `00 Dashboards/Boards.md` | [[13 Kanban Boards]] |
-| + | AI in the vault | `AGENTS.md`, `Prompts/`, `00 Dashboards/Assistant.md` | [[14 Agent Client and Claude Code]], [[20 Prompt Library]] |
+| + | AI in the vault | `AGENTS.md`, `Prompts/`, `00 Dashboards/AI 助手.md` | [[14 Agent Client and Claude Code]], [[20 Prompt Library]] |
 | + | Knowledge layer (claude-obsidian) | `wiki/`, `inbox/`, `wiki/routing-map.md` | [[15 claude-obsidian]] |
 | + | Research and publishing | Web viewer, SEO, Vault Lens | [[16 SEO, Web Viewer, and Vault Lens]], [[17 Search Providers]] |
 | + | Obsidian MCP bridge | Local REST API `/mcp`, `.mcp.example.json` | [[19 Obsidian MCP Bridge]] |

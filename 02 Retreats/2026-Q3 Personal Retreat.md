@@ -73,7 +73,7 @@ Changes to make:
 - Add "friend call" to Thursday 20:00.
 
 ## 7. Projects to commit to
-- [[Example Project - Compass Vault]]
+- [[示例项目 - Compass 仓库]]
 
 ## Closing
 - A quarter of showing up for people, tracked honestly.

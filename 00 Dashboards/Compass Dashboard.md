@@ -38,7 +38,7 @@ await dv.view("Meta/views/memento");
 ```
 
 ## 询问
-打开 [[Assistant|助手]] 使用完整提示词库，或者直接选择下方操作（需已配置 Agent Client 和智能体）：
+打开 [[AI 助手]] 使用完整提示词库，或者直接选择下方操作（需已配置 Agent Client 和智能体）：
 ```agent
 type: button
 text: "今天最重要的事"
@@ -58,6 +58,6 @@ viewType: right-pane
 - [[Task Dashboard]]
 - [[Projects Dashboard]]
 - [[Boards]]
-- [[Assistant]]
+- [[AI 助手]]
 - [[Setup]]
 - [[Ideal Week]] · [[Core Values]] · [[Life Theme]]

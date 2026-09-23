@@ -817,7 +817,7 @@ const MODULES = {
         icon: "sparkles",
         label: "Open assistant",
         description: "Use the complete prompt library.",
-        path: "00 Dashboards/Assistant.md",
+        path: "00 Dashboards/AI 助手.md",
       },
       {
         icon: "sun",
@@ -1061,7 +1061,7 @@ class LifeOSHomeView extends ItemView {
       icon: "sparkles",
       label: "Ask Life OS",
       description: "Open the governed AI workspace.",
-      onClick: () => this.openPath("00 Dashboards/Assistant.md"),
+      onClick: () => this.openPath("00 Dashboards/AI 助手.md"),
     });
 
     this.renderSetupBanner(shell);

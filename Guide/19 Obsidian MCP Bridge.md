@@ -32,7 +32,7 @@ Optional and terminal-based. Skip if you do not use a terminal; the Agent Client
 4. Test in the chat: "Open the Projects Board" or "Run the Daily Questions Prompt command". You will see an `obsidian` tool call and a permission prompt the first time.
 
 ## Two Claudes, one vault
-The chat panel in [[Assistant]] and a terminal `claude` session are separate processes. They do not need to talk to each other: both reach the same Obsidian through this MCP server and the same files on disk. If you want one to hand work to the other, write it into a note (for example `wiki/hot.md` or the daily note) and the other picks it up. Claude Code's Remote Control or a custom MCP relay would be needed only for live message passing between the two, which Compass does not require.
+The chat panel in [[AI 助手]] and a terminal `claude` session are separate processes. They do not need to talk to each other: both reach the same Obsidian through this MCP server and the same files on disk. If you want one to hand work to the other, write it into a note (for example `wiki/hot.md` or the daily note) and the other picks it up. Claude Code's Remote Control or a custom MCP relay would be needed only for live message passing between the two, which Compass does not require.
 
 ## Safety
 - Loopback only; the key grants vault access. Keep automatic approvals off in Agent Client and review permissions in every other client. The API does not itself enforce the vault's ask-before-write policy, and external clients can act outside Agent Client's approval interface.

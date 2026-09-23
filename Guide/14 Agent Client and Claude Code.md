@@ -3,7 +3,7 @@ Plugin: Agent Client 0.12.1 (`agent-client`, https://github.com/RAIT-09/obsidian
 ## What it adds to Compass
 - Talk to a configured agent and explicitly mention the notes you intend to share. The embedded Assistant chat uses its hosting note as context; active-note and linked-note behavior depends on client settings.
 - Keep automatic approvals off. Asking before edits is a policy, not a guarantee enforced across every external client or agent.
-- Prepared prompts as buttons on [[Assistant]] and the [[Compass Dashboard]]: weekly review, retreat prep, "what matters today", writing help.
+- Prepared prompts as buttons on [[AI 助手]] and the [[Compass Dashboard]]: weekly review, retreat prep, "what matters today", writing help.
 - The vault root `AGENTS.md` (pointed to by `CLAUDE.md` and `GEMINI.md`) is read at the start of each session. It tells the agent the folder map, the property conventions, and what never to touch. Edit it when you change the system. Recurring jobs are in `Prompts/` ([[20 Prompt Library]]).
 - The shipped `.claude/settings.json` contains a read-only MCP allowlist. Effective permissions also depend on the client and its other settings. The optional claude-obsidian integration supplies knowledge workflows; see [[15 claude-obsidian]].
 - With the Obsidian MCP bridge (see [[19 Obsidian MCP Bridge]]) the agent can open notes and boards, run any Obsidian command, search, and patch notes from inside the chat.
