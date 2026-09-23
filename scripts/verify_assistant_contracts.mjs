@@ -18,5 +18,5 @@ for (const [, block] of buttons) {
 assert.match(source, /## (?:Before you send|发送之前)/);
 assert.match(source, /(?:policy, not a technical guarantee|工作规则，不是每个客户端都会请求审批的技术保证)/);
 assert.match(source, /noteContext: hosting/);
-assert.match(source, /not proof of authentication/);
+assert.match(source, /(?:not proof of authentication|不能证明身份验证成功)/);
 console.log("Assistant contracts passed: 16 explicit non-auto-send workflows, local prompt paths, context and authority disclosure. Native client behavior not tested.");

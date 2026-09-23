@@ -236,6 +236,8 @@ const ZH_CN = Object.freeze({
   "Use the library in active creative work.": "在当前创作中使用知识库。",
   Videos: "视频",
   "Whole-life review": "人生全景复盘",
+  "Seven-day signal": "七日信号",
+  "Property coverage only. Your journal words remain private.": "仅统计属性记录情况，日记正文保持私密。",
   active: "进行中",
   drafting: "起草中",
   reading: "阅读中",
@@ -849,9 +851,9 @@ class LifeOSCaptureModal extends Modal {
     const root = this.contentEl;
     root.empty();
     root.addClass("life-os-capture-modal");
-    root.createEl("h2", { text: "Capture" });
+    root.createEl("h2", { text: this.plugin.t("Capture") });
     root.createEl("p", {
-      text: "Choose what this is. Life OS will route it to the right place.",
+      text: this.plugin.t("Choose what this is. Life OS will route it to the right place."),
     });
 
     const groups = [
@@ -861,7 +863,7 @@ class LifeOSCaptureModal extends Modal {
     ];
     for (const group of groups) {
       const section = root.createDiv({ cls: "life-os-capture-section" });
-      section.createEl("h3", { text: group.title });
+      section.createEl("h3", { text: this.plugin.t(group.title) });
       const grid = section.createDiv({ cls: "life-os-capture-grid" });
       for (const action of group.actions) {
         const button = grid.createEl("button", {
@@ -871,8 +873,8 @@ class LifeOSCaptureModal extends Modal {
         const icon = button.createSpan();
         setIcon(icon, action.icon);
         const copy = button.createSpan();
-        copy.createEl("strong", { text: action.label });
-        copy.createEl("small", { text: action.description });
+        copy.createEl("strong", { text: this.plugin.t(action.label) });
+        copy.createEl("small", { text: this.plugin.t(action.description) });
         this.registerDomEvent(button, "click", () => {
           this.close();
           this.plugin.runCommand(action.command, action.label);

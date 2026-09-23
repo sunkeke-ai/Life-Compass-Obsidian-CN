@@ -1,14 +1,14 @@
-通过 Agent Client 在仓库中使用已配置的智能体。工作流会要求智能体遵守 `AGENTS.md`，但这是工作规则，不是每个客户端都会请求审批的技术保证。请确认你使用的客户端已关闭自动批准。设置说明：[[14 Agent Client and Claude Code]]。如果没有该插件，可打开 `Prompts/` 中的笔记，将 Prompt 部分复制到你选择的智能体中（[[20 Prompt Library]]）。
+通过 Agent Client 在仓库中使用已配置的智能体。工作流会要求智能体遵守 `AGENTS.md`，但这是工作规则，不是每个客户端都会请求审批的技术保证。请确认你使用的客户端已关闭自动批准。设置说明：[[14 Agent Client and Claude Code|14 Agent Client 与 Claude Code]]。如果没有该插件，可打开 `Prompts/` 中的笔记，将 Prompt 部分复制到你选择的智能体中（[[20 Prompt Library|20 提示词库]]）。
 
 ## 发送之前
 
-下方按钮会生成提示词，但不会自动发送。请先在输入框中审阅内容。嵌入式对话会使用当前 Assistant 笔记作为上下文，不保证自动包含你上一篇查看的其他笔记。
+下方按钮会生成提示词，但不会自动发送。请先在输入框中审阅内容。嵌入式对话会使用当前的“AI 助手”笔记作为上下文，不保证自动包含你上一篇查看的其他笔记。
 
-- Check the selected agent, mentioned notes, attachments, and linked-note expansion settings.
-- A provider-backed conversation can send your prompt and included or subsequently retrieved notes to that provider. Journal and relationship notes can contain sensitive personal information.
-- For a broad review, first ask for the proposed note paths and date range. Approve the context you want read before continuing.
-- Approving a context selection is not approval to edit, install, spend, or publish.
-- A configured agent or local API key is not proof of authentication, a working connection, or a successfully tested workflow.
+- 检查已选智能体、提及的笔记、附件和链接笔记展开设置。
+- 由模型服务商支持的对话可能会将你的提示词、已包含的笔记，以及后续检索到的笔记发送给该服务商。日记和人际关系笔记可能包含敏感个人信息。
+- 进行大范围复盘时，先要求给出计划读取的笔记路径和日期范围。确认你同意读取的上下文后再继续。
+- 批准上下文选择，不等于批准编辑、安装、支出或发布操作。
+- 已配置智能体或本地 API 密钥，不能证明身份验证成功、连接可用或工作流已通过测试。
 
 Life OS 自带仪表盘不会直接调用模型服务商。这些控件会把任务交给 Agent Client，实际行为取决于其设置、外部客户端和所选智能体。
 
