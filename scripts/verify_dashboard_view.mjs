@@ -108,12 +108,24 @@ try {
       assert.ok((await page.locator('.life-os-connection-map').innerText()).includes('not tested here'));
     }
     if(screen==='plan'){
+      await page.evaluate(()=>{window.view.zhCn=true;window.view.render();});
+      assert.deepEqual(await page.evaluate(()=>[
+        window.view.formatPropertyLabel('habit_journal'),
+        window.view.formatPropertyLabel('habit_exercise'),
+        window.view.formatPropertyLabel('habit_reading'),
+      ]),['日记','锻炼','阅读']);
       assert.equal(await page.locator('.life-os-calendar-day').count(),42);
       await page.getByRole('button',{name:'2026-09-09: Open daily note',exact:true}).click();
       assert.equal(await page.evaluate(()=>window.opened.at(-1)?.path),'01 Journal/Daily/2026-09-09.md');
-      await page.getByRole('button',{name:'Next month',exact:true}).click();
-      assert.ok((await page.locator('.life-os-calendar h2').innerText()).includes('October'));
-      await page.getByRole('button',{name:'This month',exact:true}).click();
+      assert.equal(await page.getByRole('button',{name:'上个月',exact:true}).count(),1);
+      assert.equal(await page.getByRole('button',{name:'本月',exact:true}).count(),1);
+      assert.equal(await page.getByRole('button',{name:'下个月',exact:true}).count(),1);
+      const currentMonth=await page.locator('.life-os-calendar h2').innerText();
+      await page.getByRole('button',{name:'下个月',exact:true}).click();
+      assert.notEqual(await page.locator('.life-os-calendar h2').innerText(),currentMonth);
+      await page.getByRole('button',{name:'本月',exact:true}).click();
+      assert.equal(await page.locator('.life-os-calendar h2').innerText(),currentMonth);
+      await page.evaluate(()=>{window.view.zhCn=false;});
     }
     if(screen==='review'){
       await page.getByRole('button',{name:'7 days',exact:true}).click();

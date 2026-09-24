@@ -1,6 +1,6 @@
 ---
 template_version: 1.1.0-zh.1
-built: 2026-09-23
+built: 2026-09-24
 release_status: pre-release
 min_obsidian: 1.13.1
 plugins:

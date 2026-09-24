@@ -1,7 +1,7 @@
 claude-obsidian (https://github.com/AgriciDaniel/claude-obsidian, a Claude Code plugin by the template author) is the **knowledge and provenance layer**. It gives Claude Code vault skills: `/save`, `/wiki-query`, `/wiki-ingest`, `/wiki-lint`, `/autoresearch`, `/think`, `/canvas`, Bases and Markdown references, and a transaction core that plans, shows a hash, and only writes after approval.
 
 ## What it is not
-It is not the thing that runs Compass. Its transaction core writes only under `wiki/` and `.raw/`. Daily notes, retreats, tasks, people, and writing are edited in Obsidian (QuickAdd, Templater, Tasks, Kanban) or through the Agent Client chat with per-edit approval ([[14 Agent Client and Claude Code]]). Both layers read the vault-root `CLAUDE.md`.
+It is not the thing that runs Compass. Its transaction core writes only under `wiki/` and `.raw/`. Daily notes, retreats, tasks, people, and writing are edited in Obsidian (QuickAdd, Templater, Tasks, Kanban) or through the Agent Client chat with per-edit approval ([[14 Agent Client 与 Claude Code]]). Both layers read the vault-root `CLAUDE.md`.
 
 ## What the knowledge layer adds
 | Path | Purpose |

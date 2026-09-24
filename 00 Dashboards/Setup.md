@@ -35,7 +35,7 @@ await dv.view("Meta/views/setup");
 ## 本月
 - Day 8: delete the notes tagged `example` (the [[16 Onboarding Assistant]] can do it one file at a time, or use search `tag:#example`).
 - Day 14: open this week's weekly note (Ctrl/Cmd+Alt+W) and fill only "What went well".
-- Day 21: optional, AI in the vault: [[14 Agent Client and Claude Code]], then press **Help me set up this vault** below.
+- Day 21: optional, AI in the vault: [[14 Agent Client 与 Claude Code]], then press **Help me set up this vault** below.
 - Day 30: if 25 of 30 days are scored (the checklist counts), read [[04 Workflow - Personal Retreat]] and book a retreat for day 60 to 90. Tasks, writing boards, the browser extension come after that ([[11 Build Order]]).
 
 ## 使用 AI 助手

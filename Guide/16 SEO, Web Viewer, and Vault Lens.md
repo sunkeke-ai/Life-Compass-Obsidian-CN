@@ -15,4 +15,4 @@ Audits notes meant to be published: title and description length, keyword in tit
 https://github.com/jk-oster/obsidian-search-for-web. Shows matching vault notes next to web search results and on pages you revisit. Needs a vault-side provider: see [[17 Search Providers]] for the security review and the member setup steps.
 
 ## Together
-Web viewer to read, Web Clipper + Vault Lens to capture and resurface, Claude via [[14 Agent Client and Claude Code]] to draft in `06 Writing`, SEO to audit before it leaves the vault.
+Web viewer to read, Web Clipper + Vault Lens to capture and resurface, Claude via [[14 Agent Client 与 Claude Code]] to draft in `06 Writing`, SEO to audit before it leaves the vault.

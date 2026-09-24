@@ -1,4 +1,4 @@
-通过 Agent Client 在仓库中使用已配置的智能体。工作流会要求智能体遵守 `AGENTS.md`，但这是工作规则，不是每个客户端都会请求审批的技术保证。请确认你使用的客户端已关闭自动批准。设置说明：[[14 Agent Client and Claude Code|14 Agent Client 与 Claude Code]]。如果没有该插件，可打开 `Prompts/` 中的笔记，将 Prompt 部分复制到你选择的智能体中（[[20 Prompt Library|20 提示词库]]）。
+通过 Agent Client 在仓库中使用已配置的智能体。工作流会要求智能体遵守 `AGENTS.md`，但这是工作规则，不是每个客户端都会请求审批的技术保证。请确认你使用的客户端已关闭自动批准。设置说明：[[14 Agent Client 与 Claude Code]]。如果没有该插件，可打开 `Prompts/` 中的笔记，将 Prompt 部分复制到你选择的智能体中（[[20 Prompt Library|20 提示词库]]）。
 
 ## 发送之前
 

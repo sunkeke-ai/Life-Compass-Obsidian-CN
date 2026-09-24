@@ -11,7 +11,7 @@
 ## Added after the video (owner's choices)
 | Plugin | ID | Used for | Guide |
 | --- | --- | --- | --- |
-| **Agent Client** 0.12.1 | `agent-client` | Claude Code inside Obsidian; buttons and embedded chat on the dashboards | [[14 Agent Client and Claude Code]] |
+| **Agent Client** 0.12.1 | `agent-client` | Claude Code inside Obsidian; buttons and embedded chat on the dashboards | [[14 Agent Client 与 Claude Code]] |
 | **SEO** 0.5.6 | `seo` | audit notes in `06 Writing` before publishing | [[16 SEO, Web Viewer, and Vault Lens]] |
 | **Omnisearch** 1.30.1 | `omnisearch` | better in-vault search; search provider for the Vault Lens browser extension | [[17 Search Providers]] |
 | **Local REST API** 5.1.0 | `obsidian-local-rest-api` | provider for Vault Lens note preview and editing from the browser; general local API | [[17 Search Providers]] |

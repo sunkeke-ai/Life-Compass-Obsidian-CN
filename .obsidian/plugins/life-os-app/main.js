@@ -69,6 +69,7 @@ const ZH_CN = Object.freeze({
   "Search the library": "搜索知识库", "Writing pipelines": "写作流程", "Open assistant": "打开 AI 助手",
   "What matters today": "今天最重要的事", "Task triage": "任务整理", "Setup and permissions": "设置与权限",
   "Open board": "打开看板", "Open note": "打开笔记", "Standard graph": "标准图谱", "Clear selection": "清除选择",
+  "Previous month": "上个月", "This month": "本月", "Next month": "下个月",
   "All regions": "全部区域", "Find a note…": "搜索笔记…", "Brain regions": "大脑分区", "Notes and connections": "笔记与连接",
   "Your connected brain": "你的关联大脑", "Restore view defaults": "恢复默认视图",
   "Direction & projects": "方向与项目", "Journal & reflection": "日记与反思",
@@ -253,7 +254,7 @@ const ZH_CN = Object.freeze({
   "Example Study Note - In the Beginning": "示例学习笔记：起初",
   "Open the Setup dashboard and work through it, then tick this off": "打开“设置”仪表盘，按步骤完成后勾选此任务",
   Health: "健康", Relationships: "人际关系", Family: "家庭", Career: "事业",
-  Finances: "财务", Growth: "成长", Fun: "乐趣", Meaning: "意义",
+  Finances: "财务", Growth: "成长", Fun: "乐趣", Meaning: "意义", Exercise: "锻炼", Reading: "阅读",
 });
 
 function translateZhCn(value) {
@@ -1561,10 +1562,11 @@ class LifeOSHomeView extends ItemView {
   }
 
   formatPropertyLabel(key) {
-    return String(key)
+    const label = String(key)
       .replace(/^(dq|habit|wheel)_/, "")
       .replace(/[_-]+/g, " ")
       .replace(/\b\w/g, (letter) => letter.toUpperCase());
+    return this.zhCn ? translateZhCn(label) : label;
   }
 
   renderModuleLive(parent) {
@@ -1702,7 +1704,7 @@ class LifeOSHomeView extends ItemView {
     const toolbar = section.createDiv({ cls: "life-os-calendar-toolbar" });
     toolbar.createEl("h2", { text: month.toLocaleDateString(undefined, { month: "long", year: "numeric", timeZone: "UTC" }) });
     for (const [label, delta] of [["Previous month", -1], ["This month", 0], ["Next month", 1]]) {
-      const button = toolbar.createEl("button", { text: label });
+      const button = toolbar.createEl("button", { text: this.zhCn ? translateZhCn(label) : label });
       button.type = "button";
       this.registerDomEvent(button, "click", () => { this.calendarOffset = delta ? (this.calendarOffset || 0) + delta : 0; this.render(); });
     }
