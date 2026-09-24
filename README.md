@@ -4,7 +4,10 @@
 
 > 在 Obsidian 中管理日记、目标、习惯、任务、项目、写作、阅读和人生复盘。
 
-这是 [sunkeke-ai/life-OS](https://github.com/sunkeke-ai/life-OS) 的非官方简体中文本地化版本。它保留了上游的 Markdown 数据结构、系统属性键和工作流兼容性，并对 Life OS 主界面、主要仪表盘、模板、配置说明和示例内容进行了中文化。
+> [!important] 原项目与作者
+> 本项目是 [Compass](https://github.com/AgriciDaniel/compass) 的非官方简体中文本地化版本。原项目由 [Daniel Agrici（@AgriciDaniel）](https://github.com/AgriciDaniel) 创建和维护。本仓库仅负责中文本地化与兼容性调整，不代表原作者发布的官方中文版。
+
+本版本保留了原项目的 Markdown 数据结构、系统属性键和工作流兼容性，并对 Life OS 主界面、主要仪表盘、模板、配置说明和示例内容进行了中文化。
 
 当前版本：`v1.1.0-zh.1`
 
@@ -161,7 +164,9 @@ python3 scripts/build_template.py \
 
 ## 上游、署名与许可证
 
-- 上游项目：[sunkeke-ai/life-OS](https://github.com/sunkeke-ai/life-OS)
+- 原项目：[AgriciDaniel/compass](https://github.com/AgriciDaniel/compass)
+- 原作者与维护者：[Daniel Agrici（@AgriciDaniel）](https://github.com/AgriciDaniel)
+- 简体中文本地化：[孙可可（@sunkeke-ai）](https://github.com/sunkeke-ai)
 - 工作流灵感：Mike Schmitz 的公开视频 “How I Run My Whole Life Out of Obsidian”
 - 每日问题：Marshall Goldsmith 与 Mark Reiter 的《Triggers》
 - 多尺度规划：Cal Newport
@@ -173,4 +178,4 @@ python3 scripts/build_template.py \
 
 `.obsidian/plugins/` 中的第三方插件保留各自许可证。发布或再分发前，请阅读 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
 
-本中文版本是社区本地化项目，与 Obsidian、Practical PKM、LifeHQ 或上游作者不存在官方隶属或背书关系。
+本中文版本是社区本地化项目，与 Obsidian、Practical PKM、LifeHQ 或原作者不存在官方隶属或背书关系。

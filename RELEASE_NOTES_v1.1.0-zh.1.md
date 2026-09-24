@@ -1,6 +1,6 @@
 # Life OS 简体中文版 v1.1.0-zh.1
 
-这是基于 [sunkeke-ai/life-OS](https://github.com/sunkeke-ai/life-OS) 1.1.0 候选版本制作的非官方简体中文预发布版。
+这是基于 [AgriciDaniel/compass](https://github.com/AgriciDaniel/compass) 制作的非官方简体中文预发布版。原项目由 [Daniel Agrici（@AgriciDaniel）](https://github.com/AgriciDaniel) 创建和维护；简体中文本地化由 [孙可可（@sunkeke-ai）](https://github.com/sunkeke-ai) 完成。本版本不代表原作者发布的官方中文版。
 
 > [!IMPORTANT]
 > 此版本已通过自动化构建和归档校验，但尚未完成所有平台的 Obsidian 原生验收。建议先在新的独立文件夹中试用，不要覆盖现有仓库。
@@ -66,6 +66,8 @@ SHA-256 以同时发布的 `.zip.sha256` 文件为准。
 
 本项目保留上游署名和许可证：
 
+- 原项目与作者：[Compass](https://github.com/AgriciDaniel/compass)，Daniel Agrici（[@AgriciDaniel](https://github.com/AgriciDaniel)）
+- 简体中文本地化：孙可可（[@sunkeke-ai](https://github.com/sunkeke-ai)）
 - 代码、模板、仪表盘、脚本、配置和提示词：MIT
 - `Guide/` 说明文字：CC BY 4.0
 - 第三方插件：各自许可证，详见 `THIRD_PARTY_NOTICES.md`

@@ -16,6 +16,7 @@ Format: Added, Changed, Templates (manual merge notes), Plugins, Breaking. Semve
 - Rename the visible example project note to `04 Projects/示例项目 - Compass 仓库.md` and update its reference.
 - Keep internal property prefixes, task query syntax, command ids, tags, plugin ids, and agent execution prompts unchanged for compatibility.
 - Translate the Agent Client and Claude Code guide, the Plan month controls, and default habit labels at the display layer while retaining their original paths, property keys, and click handlers.
+- Correct the original-project attribution to Daniel Agrici and `AgriciDaniel/compass` across the README, credits, Guide license, and release materials.
 
 ### Verification
 - Pass 59 Life OS application checks, 16 explicit non-auto-send Assistant workflow checks, 11 release-safety tests, 163 candidate checks, and exact restoration of 211 archived files.

@@ -77,7 +77,7 @@ git status
 期望状态：
 
 - `origin` 指向你的仓库。
-- `upstream` 指向 `https://github.com/sunkeke-ai/life-OS.git`。
+- `upstream` 指向 `https://github.com/AgriciDaniel/compass.git`。
 - 当前分支为 `main`。
 - 工作树干净。
 
@@ -135,4 +135,3 @@ git merge upstream/main
 ```
 
 合并前先建立分支，检查上游是否改动了已经中文化的文件。出现冲突时，优先保留系统键和工作流语法，再重新应用中文显示文字。
-
